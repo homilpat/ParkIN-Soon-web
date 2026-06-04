@@ -1,0 +1,18 @@
+{
+  "method": "auc_weighted_average",
+  "weights": {
+    "olf": 0.329815,
+    "img": 0.346115,
+    "kin": 0.32407
+  },
+  "auc_scores": {
+    "olf": 0.775,
+    "img": 0.8133,
+    "kin": 0.7615
+  },
+  "description": {
+    "olf": "PPMI BSIT12+SCOPA - XGBoost 5-Fold CV",
+    "img": "Spiral drawing CNN (MobileNetV2) - Holdout",
+    "kin": "UCI+PaHaW kinematic RF - 5-Fold CV mean"
+  }
+}
