@@ -1230,8 +1230,7 @@ elif st.session_state.step == 3:
             width=CANVAS_SIZE,
             drawing_mode="freedraw",
             key="spiral_canvas",
-            display_toolbar=True,
-            update_streamlit=False
+            display_toolbar=True
         )
 
     st.markdown("<div style='margin-top:16px'></div>", unsafe_allow_html=True)
