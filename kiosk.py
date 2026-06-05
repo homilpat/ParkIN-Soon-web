@@ -451,16 +451,22 @@ def percent_badge(value):
 def emphasize_symptoms(text):
     keywords = [
         "불규칙함",
+        "불규칙한",
         "뚜렷하지 않습니다",
         "주의 신호",
         "떨림",
         "느려짐",
+        "느린 편",
         "변비",
         "냄새가 둔해짐",
         "냄새를 잘 못 맡음",
         "힘을 많이 줌",
         "불편 신호",
         "이상 신호",
+        "이상 패턴",
+        "속도 변동",
+        "배변 불편",
+        "어려움",
     ]
     for keyword in keywords:
         text = text.replace(keyword, red_text(keyword))
@@ -912,28 +918,28 @@ def olf_local_comment(score):
         f"정상군 평균 {NORMAL_OLF_PCT:.0f}%보다 {abs(gap):.0f}%p 높거나 비슷합니다."
     )
     if pct >= 75:
-        return (
-            C_GREEN,
+        body = (
             f"12개 냄새 중 {score}개를 맞히셨어요.<br>"
             f"{avg_text}<br>"
             "냄새를 구별하는 힘이 비교적 잘 유지된 것으로 보입니다.<br>"
             "이 결과만으로 건강 상태를 단정하지는 않습니다."
         )
+        return C_GREEN, emphasize_symptoms(body)
     if pct >= 50:
-        return (
-            C_ORANGE,
+        body = (
             f"12개 냄새 중 {score}개를 맞히셨어요.<br>"
             f"{avg_text}<br>"
             "냄새를 구별하는 힘이 조금 낮게 보일 수 있습니다.<br>"
             "컨디션, 감기, 비염도 영향을 줄 수 있어요."
         )
-    return (
-        C_RED,
+        return C_ORANGE, emphasize_symptoms(body)
+    body = (
         f"12개 냄새 중 {score}개를 맞히셨어요.<br>"
         f"{avg_text}<br>"
         "냄새를 구별하는 데 어려움이 있었던 것으로 보입니다.<br>"
         "걱정이 되시면 신경과나 이비인후과 상담을 권합니다."
     )
+    return C_RED, emphasize_symptoms(body)
 
 def bowel_local_comment(score):
     gap = score - NORMAL_BOWEL_SCORE
@@ -943,28 +949,28 @@ def bowel_local_comment(score):
         f"일반 평균 {NORMAL_BOWEL_SCORE:.0f}점보다 낮거나 비슷합니다."
     )
     if score < 3:
-        return (
-            C_GREEN,
+        body = (
             f"배변 불편 점수는 {score}점입니다. 높을수록 불편이 큰 점수입니다.<br>"
             f"{avg_text}<br>"
             "최근 한 달 동안 큰 배변 불편은 적었던 것으로 보입니다.<br>"
             "물을 충분히 드시고, 규칙적인 식사를 유지해 주세요."
         )
+        return C_GREEN, emphasize_symptoms(body)
     if score < 6:
-        return (
-            C_ORANGE,
+        body = (
             f"배변 불편 점수는 {score}점입니다. 높을수록 불편이 큰 점수입니다.<br>"
             f"{avg_text}<br>"
             "배변 불편이 조금 있었던 것으로 보입니다.<br>"
             "증상이 계속되면 의료진과 상담해 보세요."
         )
-    return (
-        C_RED,
+        return C_ORANGE, emphasize_symptoms(body)
+    body = (
         f"배변 불편 점수는 {score}점입니다. 높을수록 불편이 큰 점수입니다.<br>"
         f"{avg_text}<br>"
         "배변 불편이 뚜렷하게 있었던 것으로 보입니다.<br>"
         "무리하지 마시고 전문의 상담을 받아보시는 것이 좋습니다."
     )
+    return C_RED, emphasize_symptoms(body)
 
 def drawing_local_comment(p_img, p_kin, shape_comment, kin_comment):
     if p_img >= T_IMG or p_kin >= T_KIN:
@@ -983,7 +989,7 @@ def drawing_local_comment(p_img, p_kin, shape_comment, kin_comment):
             "이번 손그림 결과에서는 큰 이상 신호가 뚜렷하지 않습니다.<br>"
             "다만 이 검사는 진단이 아니라 참고용입니다."
         )
-    return color, body
+    return color, emphasize_symptoms(body)
 
 def final_local_comment(cnt, olf_score, con_score, p_olf, p_img, p_kin):
     olf_bowel_note = []

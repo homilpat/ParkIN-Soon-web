@@ -68,6 +68,11 @@ def _auto_prompt_for_step(current_step, test_results):
     return ""
 
 
+@st.cache_resource
+def _get_rag_chatbot(api_key: str):
+    return ParkinsonRAG(api_key=api_key)
+
+
 def render_parkinson_chatbot(test_results: dict):
     current_step = test_results.get("step", 0)
     if current_step < 4:
@@ -98,7 +103,7 @@ def render_parkinson_chatbot(test_results: dict):
         st.info(".env 파일의 OPENAI_API_KEY 값을 입력하면 AI 상담이 활성화됩니다.")
         return
 
-    rag = ParkinsonRAG(api_key=api_key)
+    rag = _get_rag_chatbot(api_key)
     if not rag.db:
         st.warning("논문 벡터 DB가 없습니다. 아래 버튼으로 PDF 기반 DB를 먼저 생성해주세요.")
         if st.button("논문 벡터 DB 생성하기", use_container_width=True):
@@ -117,7 +122,9 @@ def render_parkinson_chatbot(test_results: dict):
     chat_container = st.container(height=360, border=True)
     with chat_container:
         for msg in st.session_state.report_messages:
-            with st.chat_message(msg["role"], avatar="character.png" if msg["role"] == "assistant" else None):
+            role_name = "사용자" if msg["role"] == "user" else "AI 박인순"
+            avatar_val = "character.png" if msg["role"] == "assistant" else "👤"
+            with st.chat_message(role_name, avatar=avatar_val):
                 st.markdown(msg["content"])
 
     with st.form("parkinsoon_chat_form", clear_on_submit=True):
