@@ -123,7 +123,7 @@ def render_parkinson_chatbot(test_results: dict):
     with chat_container:
         for msg in st.session_state.report_messages:
             role_name = "사용자" if msg["role"] == "user" else "AI 박인순"
-            avatar_val = "character.png" if msg["role"] == "assistant" else "👤"
+            avatar_val = "character.png" if msg["role"] == "assistant" else None
             with st.chat_message(role_name, avatar=avatar_val):
                 st.markdown(msg["content"])
 
