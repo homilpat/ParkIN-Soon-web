@@ -1,3 +1,24 @@
+# 🧠 ParkIN Soon: ML/DL 기반 파킨슨 위험군 조기 선별 웹 서비스
+
+비침습적 다중모달(Multi-modal) 데이터를 융합하여 파킨슨 위험군을 조기에 선별하고 보건소 추천 서비스를 제공하는 ML/DL 기반 웹 플랫폼입니다.
+
+## 📌 핵심 아키텍처 및 문제 해결
+**1. 데이터 희석을 방지하는 Late Fusion 아키텍처**
+* **구조:** 설문 데이터(PPMI), 키네마틱 운동학 데이터, 나선형 그리기 데이터를 융합.
+* **전략:** 데이터 간의 스케일과 특성이 크게 달라 병합 시 고유 특징이 손실되는 Early Fusion의 한계를 인지. 각 모달리티별로 독립적인 모델 학습 후 최종 예측값을 결합하는 **Late Fusion** 방식 채택.
+
+**2. 머신비전 도메인 차이(Sim-to-Real Gap) 극복**
+* **문제:** 나선형 그리기 딥러닝 파트에서, 실사용 환경의 조명 및 펜 색상 차이로 인해 인식률 저하.
+* **해결 방안:** **OpenCV**를 활용하여 배경 이미지를 제거하고, 다양한 파란선 입력값을 검은선으로 변환시키는 도메인 보정 로직 구축.
+
+**3. 사용자 편의를 위한 생성형 AI 도입**
+* **특징:** OpenAI API를 활용한 RAG 기반 LLM 챗봇을 구현하여 질의응답 및 서비스 편의성 극대화.
+
+## 🛠 Tech Stack
+* **Language/Web:** Python, Streamlit
+* **AI/ML/DL:** Scikit-learn, PyTorch, OpenCV, RAG LLM
+* **Data:** PPMI(설문), Kinematic Data, Image Data
+* 
 # ParkIN Soon 키오스크 실행 안내
 
 ## OpenAI API 키 설정
