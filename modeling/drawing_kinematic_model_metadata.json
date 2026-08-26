@@ -1,0 +1,14 @@
+{
+  "model": "drawing kinematic deployment artifact",
+  "validation_auc": 0.7615,
+  "stage_threshold": 0.5418,
+  "metric_source": "fusion_config.json; validation was not rerun during migration",
+  "serialization": {
+    "migrated_at": "2026-08-26T13:20:38+09:00",
+    "source_scikit_learn": "1.7.2",
+    "runtime_scikit_learn": "1.9.0",
+    "runtime_joblib": "1.5.3",
+    "prediction_equivalence_max_abs_diff": 1.1102230246251565e-16,
+    "report": "sklearn_model_migration_1_9.json"
+  }
+}

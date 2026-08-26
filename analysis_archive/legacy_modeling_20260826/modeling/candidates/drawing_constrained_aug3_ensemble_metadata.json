@@ -1,0 +1,53 @@
+{
+  "model": "frozen MobileNetV2, constrained 32-unit head, 3x augmentation, fold ensemble",
+  "validation_unit": "subject",
+  "training": {
+    "source": "HandPD",
+    "subjects": 54,
+    "images": 368,
+    "augmentation_exposure_per_epoch": 3
+  },
+  "fold_subject_auc": [
+    1.0,
+    1.0,
+    1.0,
+    0.9523809523809524,
+    0.625
+  ],
+  "internal_grouped_oof_threshold_setting": {
+    "auc": 0.896604938271605,
+    "sensitivity": 0.8333333333333334,
+    "specificity": 0.8888888888888888,
+    "f1": 0.8823529411764706,
+    "threshold": 0.5846253633499146,
+    "confusion_matrix": [
+      [
+        16,
+        2
+      ],
+      [
+        6,
+        30
+      ]
+    ]
+  },
+  "external_legacy_28_subjects": {
+    "auc": 0.7179487179487181,
+    "sensitivity": 0.8,
+    "specificity": 0.6153846153846154,
+    "f1": 0.75,
+    "threshold": 0.5846253633499146,
+    "confusion_matrix": [
+      [
+        8,
+        5
+      ],
+      [
+        3,
+        12
+      ]
+    ]
+  },
+  "deployment_status": "candidate_pending_review_not_deployed",
+  "deployment_note": "External sensitivity=0.8000, specificity=0.6154; manual review required."
+}

@@ -1,0 +1,45 @@
+{
+  "model": "original MobileNetV2 with inner-endpoint center and scale alignment",
+  "validation_unit": "subject",
+  "training": {
+    "source": "HandPD",
+    "subjects": 54,
+    "images": 368
+  },
+  "internal_grouped_oof_threshold_setting": {
+    "auc": 0.9027777777777778,
+    "sensitivity": 0.9444444444444444,
+    "specificity": 0.8333333333333334,
+    "f1": 0.9315068493150684,
+    "threshold": 0.6952553987503052,
+    "confusion_matrix": [
+      [
+        15,
+        3
+      ],
+      [
+        2,
+        34
+      ]
+    ]
+  },
+  "external_legacy_28_subjects": {
+    "auc": 0.6871794871794872,
+    "sensitivity": 0.4,
+    "specificity": 0.9230769230769231,
+    "f1": 0.5454545454545454,
+    "threshold": 0.6952553987503052,
+    "confusion_matrix": [
+      [
+        12,
+        1
+      ],
+      [
+        9,
+        6
+      ]
+    ]
+  },
+  "deployment_status": "candidate_pending_review_not_deployed",
+  "deployment_note": "External sensitivity=0.4000, specificity=0.9231; manual review required."
+}

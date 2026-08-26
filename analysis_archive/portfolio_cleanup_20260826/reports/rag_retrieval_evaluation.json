@@ -1,0 +1,138 @@
+{
+  "cases": [
+    {
+      "query": "후각 저하는 파킨슨병의 초기 신호인가요?",
+      "expected_source": "후각과 파킨슨 종단연구",
+      "dense_rr": 1.0,
+      "hybrid_rr": 1.0,
+      "dense_top3": [
+        "후각과 파킨슨 종단연구(10년).pdf",
+        "후각머신러닝과 파킨슨.pdf",
+        "후각머신러닝과 파킨슨.pdf"
+      ],
+      "hybrid_top3": [
+        "후각과 파킨슨 종단연구(10년).pdf",
+        "후각머신러닝과 파킨슨.pdf",
+        "전구기종합파킨슨증상.pdf"
+      ],
+      "dense_source_diversity_at_3": 0.6666666666666666,
+      "hybrid_source_diversity_at_3": 1.0
+    },
+    {
+      "query": "냄새 검사와 머신러닝으로 파킨슨 위험을 구분할 수 있나요?",
+      "expected_source": "후각머신러닝과 파킨슨",
+      "dense_rr": 1.0,
+      "hybrid_rr": 1.0,
+      "dense_top3": [
+        "후각머신러닝과 파킨슨.pdf",
+        "후각머신러닝과 파킨슨.pdf",
+        "후각머신러닝과 파킨슨.pdf"
+      ],
+      "hybrid_top3": [
+        "후각머신러닝과 파킨슨.pdf",
+        "후각머신러닝과 파킨슨.pdf",
+        "후각과 파킨슨 종단연구(10년).pdf"
+      ],
+      "dense_source_diversity_at_3": 0.3333333333333333,
+      "hybrid_source_diversity_at_3": 0.6666666666666666
+    },
+    {
+      "query": "변비는 파킨슨병보다 먼저 생길 수 있나요?",
+      "expected_source": "변비와 파킨슨",
+      "dense_rr": 1.0,
+      "hybrid_rr": 1.0,
+      "dense_top3": [
+        "변비와 파킨슨.pdf",
+        "변비와 파킨슨.pdf",
+        "변비와 파킨슨.pdf"
+      ],
+      "hybrid_top3": [
+        "변비와 파킨슨.pdf",
+        "변비와 파킨슨.pdf",
+        "전구기종합파킨슨증상.pdf"
+      ],
+      "dense_source_diversity_at_3": 0.3333333333333333,
+      "hybrid_source_diversity_at_3": 0.6666666666666666
+    },
+    {
+      "query": "파킨슨병의 전구기 비운동 증상에는 무엇이 있나요?",
+      "expected_source": "전구기종합파킨슨증상",
+      "dense_rr": 1.0,
+      "hybrid_rr": 1.0,
+      "dense_top3": [
+        "전구기종합파킨슨증상.pdf",
+        "전구기종합파킨슨증상.pdf",
+        "변비와 파킨슨.pdf"
+      ],
+      "hybrid_top3": [
+        "전구기종합파킨슨증상.pdf",
+        "전구기종합파킨슨증상.pdf",
+        "나선형 그리기그래드캠.pdf"
+      ],
+      "dense_source_diversity_at_3": 0.6666666666666666,
+      "hybrid_source_diversity_at_3": 0.6666666666666666
+    },
+    {
+      "query": "나선 그리기로 파킨슨 위험 신호를 볼 수 있나요?",
+      "expected_source": "나선형그리기와 파킨슨",
+      "dense_rr": 1.0,
+      "hybrid_rr": 1.0,
+      "dense_top3": [
+        "나선형그리기와 파킨슨.pdf",
+        "나선형그리기와 파킨슨.pdf",
+        "나선형 그리기그래드캠.pdf"
+      ],
+      "hybrid_top3": [
+        "나선형그리기와 파킨슨.pdf",
+        "나선형 그리기그래드캠.pdf",
+        "나선형그리기와 파킨슨.pdf"
+      ],
+      "dense_source_diversity_at_3": 0.6666666666666666,
+      "hybrid_source_diversity_at_3": 0.6666666666666666
+    },
+    {
+      "query": "나선 그림 AI가 어느 부분을 보고 판단하나요?",
+      "expected_source": "나선형 그리기그래드캠",
+      "dense_rr": 1.0,
+      "hybrid_rr": 1.0,
+      "dense_top3": [
+        "나선형 그리기그래드캠.pdf",
+        "나선형그리기와 파킨슨.pdf",
+        "나선형그리기와 파킨슨.pdf"
+      ],
+      "hybrid_top3": [
+        "나선형 그리기그래드캠.pdf",
+        "나선형그리기와 파킨슨.pdf",
+        "나선형그리기와 파킨슨.pdf"
+      ],
+      "dense_source_diversity_at_3": 0.6666666666666666,
+      "hybrid_source_diversity_at_3": 0.6666666666666666
+    },
+    {
+      "query": "고령자에게 검사 결과를 어떻게 쉽게 설명해야 하나요?",
+      "expected_source": "노인친화적 설명",
+      "dense_rr": 1.0,
+      "hybrid_rr": 1.0,
+      "dense_top3": [
+        "노인친화적 설명.pdf",
+        "노인친화적 설명.pdf",
+        "노인친화적 설명.pdf"
+      ],
+      "hybrid_top3": [
+        "노인친화적 설명.pdf",
+        "노인친화적 설명.pdf",
+        "후각머신러닝과 파킨슨.pdf"
+      ],
+      "dense_source_diversity_at_3": 0.3333333333333333,
+      "hybrid_source_diversity_at_3": 0.6666666666666666
+    }
+  ],
+  "dense_recall_at_3": 1.0,
+  "hybrid_recall_at_3": 1.0,
+  "dense_mrr_at_5": 1.0,
+  "hybrid_mrr_at_5": 1.0,
+  "dense_source_diversity_at_3": 0.5238095238095238,
+  "hybrid_source_diversity_at_3": 0.7142857142857143,
+  "irrelevant_query_max_similarity": 0.39800721406936646,
+  "irrelevant_query_abstains_at_0_48": true
+}

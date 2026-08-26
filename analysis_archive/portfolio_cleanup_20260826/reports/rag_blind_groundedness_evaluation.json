@@ -1,0 +1,555 @@
+{
+  "provider": "LM Studio local",
+  "dataset_role": "locked_blind_test",
+  "independent_test": true,
+  "dataset_sha256": "49b6cc9feb24f40599a879d8f27b99bcd4d6ac1ab9f7fc4546cb0862e33cce61",
+  "generator_model": "parkinsoon-eval",
+  "judge_model": "parkinsoon-judge",
+  "summary": {
+    "cases": 15,
+    "factual_claims": 56,
+    "claim_groundedness": 0.23214285714285715,
+    "expected_claim_coverage": 0.36666666666666664,
+    "source_citation_accuracy": 0.3333333333333333,
+    "page_citation_accuracy": 0.2,
+    "forbidden_claim_rate": 0.0,
+    "diagnostic_overclaim_rate": 0.8
+  },
+  "results": [
+    {
+      "id": "blind_olfactory_followup_location",
+      "question": "10년 후 후각 추적 검사는 어디에서 진행됐나요?",
+      "answer": "10년 후 후각 추적 검사는 연구 참여자들에게 기초 검사와 10년 후에 다시 진행되었습니다. 이 검사는 주로 University of Pennsylvania Smell Identification Test(UPSIT)라는 후각 능력 평가 도구를 사용했습니다. 이 검사는 후각 기능의 변화를 관찰하기 위해 설계된 것입니다.(출처: 후각과 파킨슨 종단연구(10년).pdf, p.1)\n\n참고한 논문: 후각과 파킨슨 종단연구(10년).pdf 1쪽, 후각머신러닝과 파킨슨.pdf 6쪽, 후각과 파킨슨 종단연구(10년).pdf 2쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "10년 후 후각 추적 검사는 연구 참여자들에게 기초 검사와 10년 후에 다시 진행되었습니다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 'Follow-up visits were performed between August 2020 and June 2021'라는 특정 기간을 언급할 뿐, 추적 검사가 정확히 '10년 후'에 진행되었다는 사실이나 그 전후의 비교 개념을 포함하고 있지 않습니다. 따라서 주장의 시간적 간격은 Gold evidence만으로는 뒷받침되지 않습니다."
+          },
+          {
+            "claim": "이 검사는 주로 University of Pennsylvania Smell Identification Test(UPSIT)라는 후각 능력 평가 도구를 사용했습니다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 추적 방문의 시기 및 장소에 대해서만 언급하고 있으며, 구체적으로 어떤 종류의 검사 도구(예: UPSIT)가 사용되었는지에 대한 정보는 포함하고 있지 않습니다."
+          },
+          {
+            "claim": "이 검사는 후각 기능의 변화를 관찰하기 위해 설계된 것입니다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 단순히 'Follow-up visits were performed'라는 사실만을 전달할 뿐, 이 방문의 목적이나 설계 의도(후각 기능 변화 관찰)에 대해서는 언급하고 있지 않습니다."
+          }
+        ],
+        "expected_claims_covered": [
+          false,
+          false
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": false,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_olfactory_score_variation",
+      "question": "10년 후 UPSIT 점수가 그대로이거나 좋아진 사람도 있었나요?",
+      "answer": "10년 후 UPSIT 점수가 그대로이거나 좋아진 사람도 있었지만, 연구에서는 대부분의 파킨슨병 환자에서 후각 기능이 떨어졌다고 보고했습니다. 81.1%의 환자가 평균 6점 정도 후각 점수가 줄어들었는데, 이는 나이에 따른 자연스러운 감소보다 더 심한 수준이었습니다(출처: 후각과 파킨슨 종단연구(10년).pdf, p.1). 다만, 연구에서는 모든 환자를 포함했기 때문에 일부 사람의 후각 기능이 유지되거나 개선되었을 가능성도 배제할 수 없습니다(출처: 후각과 파킨슨 종단연구(10년).pdf, p.5).\n\n참고한 논문: 후각과 파킨슨 종단연구(10년).pdf 1쪽, 후각과 파킨슨 종단연구(10년).pdf 5쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "10년 후 UPSIT 점수가 그대로이거나 좋아진 사람도 있었다.",
+            "label": "supported",
+            "reason": "Gold evidence에 'UPSIT score was unchanged in 5.6%... and increased in 13.3%'라고 명시되어 있어, 점수가 유지되거나 증가한 사람이 있었음을 뒷받침한다."
+          },
+          {
+            "claim": "연구에서는 대부분의 파킨슨병 환자에서 후각 기능이 떨어졌다고 보고했다.",
+            "label": "unsupported",
+            "reason": "제공된 Gold evidence는 점수가 유지되거나 증가한 비율에 대한 통계적 수치만을 제공할 뿐, '대부분의 환자가 후각 기능이 떨어졌다'는 일반적인 결론이나 주장을 직접적으로 뒷받침하지 않는다."
+          },
+          {
+            "claim": "81.1%의 환자가 평균 6점 정도 후각 점수가 줄어들었다.",
+            "label": "unsupported",
+            "reason": "Gold evidence에는 '81.1%'나 '평균 6점 감소'와 같은 구체적인 수치가 포함되어 있지 않다."
+          },
+          {
+            "claim": "후각 기능의 점수 감소가 나이에 따른 자연스러운 감소보다 더 심한 수준이었다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 후각 기능 저하의 정도를 '나이에 따른 자연스러운 감소'와 비교하는 내용을 포함하고 있지 않다."
+          },
+          {
+            "claim": "일부 사람의 후각 기능이 유지되거나 개선되었을 가능성도 배제할 수 없다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 특정 비율(5.6%, 13.3%)로 점수가 변화했음을 통계적으로 제시하지만, '가능성'에 대한 일반적인 해석이나 추론을 뒷받침하는 내용은 포함하고 있지 않다."
+          }
+        ],
+        "expected_claims_covered": [
+          true,
+          false
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": false,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_olfactory_sex_difference",
+      "question": "장기 후각 연구에서 성별 차이는 어떻게 관찰됐나요?",
+      "answer": "성별 차이는 연구에서 살펴보았지만, 모든 그룹에서 유의미한 결과는 나오지 않았어요. 남성은 일반적으로 후각 능력이 여성보다 낮은 경향이 있었지만, 이는 모든 집단에서 똑같이 나타나지는 않았습니다(출처: 후각머신러닝과 파킨슨.pdf, p.3). 이런 결과는 후각 감소가 성별에 따라 다를 수 있음을 시사하지만, 확실한 차이는 아직 명확하게 밝혀지지 않았어요.\n\n참고한 논문: 후각머신러닝과 파킨슨.pdf 3쪽, 전구기종합파킨슨증상.pdf 2쪽, 후각과 파킨슨 종단연구(10년).pdf 1쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "성별 차이는 연구에서 살펴보았지만, 모든 그룹에서 유의미한 결과는 나오지 않았어요.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 성별 간에 명확하고 구체적인 기능적 차이(여성이 더 좋고, 여성에게서 감소가 더 컸음)를 보고하며, '유의미한 결과가 나오지 않았다'는 내용은 언급하지 않습니다."
+          },
+          {
+            "claim": "남성은 일반적으로 후각 능력이 여성보다 낮은 경향이 있었지만, 이는 모든 집단에서 똑같이 나타나지는 않았습니다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 남성이 여성보다 기능이 낮았다는 사실을 명확히 언급하지만('better in females than males'), '모든 집단에서 똑같이 나타나지 않았다'는 부분은 Gold evidence에 포함되지 않은 해석적/제한적 주장입니다."
+          },
+          {
+            "claim": "이런 결과는 후각 감소가 성별에 따라 다를 수 있음을 시사하지만, 확실한 차이는 아직 명확하게 밝혀지지 않았어요.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 'Baseline olfactory function was better in females than males, and declined more in females over follow-up'이라는 구체적이고 확정적인 관찰 결과를 제시하며, 이 차이가 단지 '시사하는 바'에 그치거나 아직 '명확하게 밝혀지지 않았다'고 한정하지 않습니다."
+          }
+        ],
+        "expected_claims_covered": [
+          false,
+          false
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": false,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_smell_external_rankings",
+      "question": "간소화 후각검사의 과적합을 줄이기 위해 어떤 외부 자료를 사용했나요?",
+      "answer": "간소화 후각검사를 설계할 때 과적합을 줄이기 위해 사용된 외부 자료는 일반적인 후각 테스트의 성과와 관련된 기존 연구입니다. 이 연구에서는 후각 테스트가 정확하게 진단할 수 있도록 해야 한다고 강조하며, 무작위 추측은 진단 정확도를 떨어뜨릴 수 있다고 설명합니다(출처: 후각머신러닝과 파킨슨.pdf, p.16). 또한, 테스트에 사용되는 특정 후각 자극물의 선택이 결과에 영향을 줄 수 있음을 밝히고 있습니다(출처: 후각머신러닝과 파킨슨.pdf, p.16). 이러한 기존 연구를 바탕으로 간소화된 검사를 설계함으로써 과도한 자극물 선택이나 테스트 디자인의 오류를 줄이고자 했습니다.\n\n참고한 논문: 후각머신러닝과 파킨슨.pdf 16쪽, 후각머신러닝과 파킨슨.pdf 3쪽, 전구기종합파킨슨증상.pdf 2쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "간소화 후각검사를 설계할 때 과적합을 줄이기 위해 사용된 외부 자료는 일반적인 후각 테스트의 성과와 관련된 기존 연구입니다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 구체적으로 'Eight published scent rankings'를 언급하며, 단순히 '일반적인 후각 테스트의 성과와 관련된 기존 연구'라는 포괄적 설명은 제공하지 않습니다."
+          },
+          {
+            "claim": "이 연구에서는 후각 테스트가 정확하게 진단할 수 있도록 해야 한다고 강조하며, 무작위 추측은 진단 정확도를 떨어뜨릴 수 있다고 설명합니다.",
+            "label": "unsupported",
+            "reason": "해당 내용은 Gold evidence (p.7)에 포함되어 있지 않으며, 출처로 제시된 p.16은 Gold pages 범위([7])를 벗어납니다."
+          },
+          {
+            "claim": "테스트에 사용되는 특정 후각 자극물의 선택이 결과에 영향을 줄 수 있음을 밝히고 있습니다.",
+            "label": "unsupported",
+            "reason": "해당 내용은 Gold evidence (p.7)에 포함되어 있지 않으며, 출처로 제시된 p.16은 Gold pages 범위([7])를 벗어납니다."
+          },
+          {
+            "claim": "이러한 기존 연구를 바탕으로 간소화된 검사를 설계함으로써 과도한 자극물 선택이나 테스트 디자인의 오류를 줄이고자 했습니다.",
+            "label": "unsupported",
+            "reason": "이는 Gold evidence에 근거한 해석 또는 요약이며, 직접적인 사실 주장으로 뒷받침되지 않습니다."
+          }
+        ],
+        "expected_claims_covered": [
+          false,
+          false
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": false,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_smell_other_parkinsonism",
+      "question": "전체 후각검사는 다른 파킨슨증도 건강 대조군만큼 잘 구분했나요?",
+      "answer": "후각검사는 파킨슨병과 다른 파킨슨증상 유사 질환, 그리고 건강한 대조군을 구분하는 데 도움이 되지만, 모든 경우에 완벽하게 구별하지는 않습니다. 후각 검사를 통해 파킨슨병의 전구기 증상을 탐지할 수 있지만, 다른 파킨슨증상 유사 질환과 건강한 사람 사이에서도 비슷한 후각 저하가 나타날 수 있어요. 이로 인해 단순히 후각검사 결과만으로는 정확하게 진단하기 어려울 수 있습니다 (출처: 후각머신러닝과 파킨슨.pdf, p.6). 따라서 후각검사는 다른 질환과의 구분을 위한 하나의 도구일 뿐이며, 추가적인 검사를 통해 확정적으로 판단해야 합니다.\n\n참고한 논문: 전구기종합파킨슨증상.pdf 2쪽, 후각머신러닝과 파킨슨.pdf 6쪽, 후각과 파킨슨 종단연구(10년).pdf 1쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "후각검사는 파킨슨병과 다른 파킨슨증상 유사 질환, 그리고 건강한 대조군을 구분하는 데 도움이 되지만, 모든 경우에 완벽하게 구별하지는 않습니다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 PD/DLB와 MSA/PSP를 구분할 때 성능이 감소했음을 언급하지만(reduced performance distinguishing PD/DLB from MSA/PSP), '건강한 대조군'과의 구분에 대한 일반적인 비교나, 모든 경우에 완벽하게 구별하지 못한다는 포괄적인 주장은 Gold evidence만으로는 충분히 뒷받침되지 않습니다."
+          },
+          {
+            "claim": "후각 검사를 통해 파킨슨병의 전구기 증상을 탐지할 수 있지만, 다른 파킨슨증상 유사 질환과 건강한 사람 사이에서도 비슷한 후각 저하가 나타날 수 있어요.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 PD/DLB와 MSA/PSP를 구분하는 성능 감소에 초점을 맞추고 있으며, '다른 파킨슨증상 유사 질환'이나 '건강한 사람'과의 비교에서 비슷한 후각 저하가 나타날 수 있다는 일반적인 주장은 Gold evidence의 범위 밖에 있습니다."
+          },
+          {
+            "claim": "따라서 후각검사는 다른 질환과의 구분을 위한 하나의 도구일 뿐이며, 추가적인 검사를 통해 확정적으로 판단해야 합니다.",
+            "label": "unsupported",
+            "reason": "이 주장은 Gold evidence에 제시된 특정 연구 결과(AUC 범위 등)를 해석한 결론적 진술입니다. Gold evidence는 성능 감소라는 사실만을 제공할 뿐, '추가적인 검사를 통해 확정적으로 판단해야 한다'는 의학적 권고나 일반화된 결론을 직접적으로 뒷받침하지 않습니다."
+          }
+        ],
+        "expected_claims_covered": [
+          false,
+          false
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": false,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_constipation_heterogeneity_sources",
+      "question": "변비 메타분석의 연구 간 차이는 무엇에서 주로 왔나요?",
+      "answer": "변비와 파킨슨병 관련 메타분석에서 연구 간 차이는 주로 연구 설계와 질환 지속 기간 때문이었습니다. 이 두 가지 요소가 큰 영향을 미쳤다고 논문에서는 밝혔습니다(출처: 변비와 파킨슨.pdf, p.8). 또한, 연구 방법에 따라 데이터를 다시 분석해보니 결과의 일관성이 어느 정도 유지되었지만, 여전히 큰 차이가 있었습니다(출처: 변비와 파킨슨.pdf, p.1). 이는 여러 연구에서 서로 다른 방식으로 데이터를 수집했기 때문일 수 있습니다.\n\n참고한 논문: 변비와 파킨슨.pdf 8쪽, 변비와 파킨슨.pdf 1쪽, 전구기종합파킨슨증상.pdf 2쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "변비와 파킨슨병 관련 메타분석에서 연구 간 차이는 주로 연구 설계와 질환 지속 기간 때문이었습니다.",
+            "label": "supported",
+            "reason": "Gold evidence에 명시된 'study type and disease duration were the main sources of heterogeneity'를 통해 뒷받침됩니다. 출처(변비와 파킨슨.pdf, p.8)는 Gold pages([8])에 포함되어 있습니다."
+          },
+          {
+            "claim": "이 두 가지 요소가 큰 영향을 미쳤다고 논문에서는 밝혔습니다.",
+            "label": "supported",
+            "reason": "Gold evidence의 'Subgroup analysis indicated that study type and disease duration were the main sources of heterogeneity'를 통해 뒷받침됩니다. 출처(변비와 파킨슨.pdf, p.8)는 Gold pages([8])에 포함되어 있습니다."
+          },
+          {
+            "claim": "연구 방법에 따라 데이터를 다시 분석해보니 결과의 일관성이 어느 정도 유지되었지만, 여전히 큰 차이가 있었습니다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 연구 간 이질성(heterogeneity)이 관찰되었다고만 언급하며, 데이터 재분석을 통해 '일관성이 어느 정도 유지'되었다는 내용은 포함하고 있지 않습니다. 또한, 출처로 제시된 변비와 파킨슨.pdf의 p.1은 Gold pages([8])에 포함되어 있지 않아 신뢰할 수 없습니다."
+          },
+          {
+            "claim": "이는 여러 연구에서 서로 다른 방식으로 데이터를 수집했기 때문일 수 있습니다.",
+            "label": "unsupported",
+            "reason": "이 주장은 해석적 추론이며, Gold evidence에 명시된 내용(study type and disease duration)을 넘어선 외부 지식 또는 추측입니다. 또한, 이 내용은 Gold pages([8])에서 직접적으로 뒷받침되지 않습니다."
+          }
+        ],
+        "expected_claims_covered": [
+          true,
+          true
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": false,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_constipation_case_control_bias",
+      "question": "변비 환자-대조군 연구에는 어떤 편향 위험이 있나요?",
+      "answer": "변비 환자와 대조군을 비교하는 연구에서는 편향 위험이 있을 수 있어요. 예를 들어, 변비가 파킨슨병의 전구기 증상 중 하나로 알려졌지만, 이는 관찰 연구에서 얻은 연관성일 뿐 원인과 결과의 관계를 입증하지 못해요. 따라서 연구 설계 시 편향이 발생할 수 있는 요소가 있을 수 있어요. 예를 들어, 변비 환자와 대조군 간에 다른 질병이나 생활습관 차이가 있으면, 이로 인해 결과 해석에 오류가 생길 수 있어요. 이러한 편향은 연구의 신뢰도에 영향을 줄 수 있으므로, 철저한 설계와 분석이 필요합니다 (출처: 변비와 파킨슨.pdf, p.1).\n\n참고한 논문: 변비와 파킨슨.pdf 2쪽, 변비와 파킨슨.pdf 1쪽, 전구기종합파킨슨증상.pdf 2쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "변비 환자와 대조군을 비교하는 연구에서는 편향 위험이 있을 수 있어요.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 'Case-control studies'에서 발생할 수 있는 구체적인 편향(recall bias, selection bias)을 언급하지만, 이 일반적인 문장 자체를 직접적으로 뒷받침하는 내용은 없습니다. 또한, 출처 페이지가 [9]로 제한되어 있어 답변의 내용과 무관한 p.1을 인용했습니다."
+          },
+          {
+            "claim": "변비가 파킨슨병의 전구기 증상 중 하나로 알려졌지만, 이는 관찰 연구에서 얻은 연관성일 뿐 원인과 결과의 관계를 입증하지 못해요.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 변비와 파킨슨병의 전구기 증상에 대한 언급을 전혀 포함하고 있지 않습니다. 이는 외부 지식(General Knowledge)입니다."
+          },
+          {
+            "claim": "변비 환자와 대조군 간에 다른 질병이나 생활습관 차이가 있으면, 이로 인해 결과 해석에 오류가 생길 수 있어요.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 'selection bias'를 언급하며 대표성(represent the population)과 이질성 증가(increase heterogeneity)를 이야기하지만, 답변에서 제시한 '다른 질병이나 생활습관 차이'라는 구체적인 예시와 그로 인한 오류 해석에 대한 설명은 Gold evidence의 범위를 벗어납니다."
+          }
+        ],
+        "expected_claims_covered": [
+          false,
+          false
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": false,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_dat_pet_advantages",
+      "question": "전구기 연구에서 DAT-PET은 DAT-SPECT보다 어떤 장점이 있나요?",
+      "answer": "DAT-PET은 DAT-SPECT보다 더 높은 선택성을 가지고 있어 특정 물질을 더 정확하게 분리할 수 있어요. 또한, PET 검사 시 약물로 갑상선 보호를 하지 않아도 되고, 검사 시간이 짧아서 편리해요. 이미지 해상도가 더 좋아서 세부적인 상태를 확인하기 쉬운데요, 이는 치료나 연구에 도움이 됩니다 (출처: 전구기종합파킨슨증상.pdf, p.7).  \n\n또한, PET 검사에서는 동적 이미지를 통해 정량적인 결과도 얻을 수 있어요. 이는 질병의 진행 정도를 더 정확하게 평가할 수 있게 해주고, 연구에서도 유용하게 쓰고 있답니다 (출처: 전구기종합파킨슨증상.pdf, p.7).\n\n참고한 논문: 전구기종합파킨슨증상.pdf 7쪽, 전구기종합파킨슨증상.pdf 5쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "DAT-PET은 DAT-SPECT보다 더 높은 선택성을 가지고 있어 특정 물질을 더 정확하게 분리할 수 있어요.",
+            "label": "supported",
+            "reason": "Gold evidence에 'superior DAT selectivity... compared with DAT-SPECT'라고 명시되어 있습니다."
+          },
+          {
+            "claim": "PET 검사 시 약물로 갑상선 보호를 하지 않아도 되고, 검사 시간이 짧아서 편리해요.",
+            "label": "supported",
+            "reason": "Gold evidence에 'shorter static imaging without thyroid protection... compared with DAT-SPECT'라고 명시되어 있습니다."
+          },
+          {
+            "claim": "이미지 해상도가 더 좋아서 세부적인 상태를 확인하기 쉬운데요, 이는 치료나 연구에 도움이 됩니다.",
+            "label": "supported",
+            "reason": "Gold evidence에 'better image resolution... compared with DAT-SPECT'라고 명시되어 있습니다. (후반부의 '치료나 연구에 도움이 된다'는 해석적 내용이 포함되었으나, 핵심 사실인 해상도 우위는 지지됩니다.)"
+          },
+          {
+            "claim": "PET 검사에서는 동적 이미지를 통해 정량적인 결과도 얻을 수 있어요.",
+            "label": "supported",
+            "reason": "Gold evidence에 'quantitative outcomes from full dynamic acquisitions compared with DAT-SPECT'라고 명시되어 있습니다."
+          },
+          {
+            "claim": "이는 질병의 진행 정도를 더 정확하게 평가할 수 있게 해주고, 연구에서도 유용하게 쓰고 있답니다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 정량적 결과(quantitative outcomes)가 가능하다는 사실만을 언급하며, 이 결과를 '질병의 진행 정도 평가'나 '연구에서의 구체적인 용도'로 해석하거나 확장하는 내용은 포함하고 있지 않습니다."
+          }
+        ],
+        "expected_claims_covered": [
+          true,
+          true
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": true,
+        "citation_page_correct": true,
+        "diagnostic_overclaim": false
+      }
+    },
+    {
+      "id": "blind_spiral_svm_limit",
+      "question": "기존 나선 SVM 연구의 성능과 한계는 무엇이었나요?",
+      "answer": "기존 나선형 그리기 연구에서는 정적과 동적 특징을 분석해 파킨슨병을 탐지하려 했습니다. 이 연구에서 사용된 방법은 수학 모델로 데이터 파일에서 공중과 표면의 운동 변수를 추출하는 방식이었어요. 하지만 이 방법에는 한계가 있었는데요, 특별히 설계된 나선형 도구에 의존해야 해서 일반적인 환경에서는 적용하기 어려웠습니다. 또한 실시간으로 결과를 얻는 것까지는 가능했지만, 질병의 진행 상황을 파악하는 데에는 한계가 있었어요. 이로 인해 분석 샘플도 제한적이었고, 더 넓은 범위에서 연구를 확장해야 했습니다 (출처: 나선형그리기와 파킨슨.pdf, p.2).\n\n참고한 논문: 나선형그리기와 파킨슨.pdf 1쪽, 나선형 그리기그래드캠.pdf 1쪽, 나선형그리기와 파킨슨.pdf 2쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "기존 나선형 그리기 연구에서는 정적과 동적 특징을 분석해 파킨슨병을 탐지하려 했습니다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 SVM으로 분류된 '선택된 필체 특징(Selected handwriting features)'의 정확도에 대해서만 언급하며, 이 연구가 정적/동적 특징 분석에 초점을 맞췄다는 내용은 포함하고 있지 않습니다."
+          },
+          {
+            "claim": "이 연구에서 사용된 방법은 수학 모델로 데이터 파일에서 공중과 표면의 운동 변수를 추출하는 방식이었어요.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 '선택된 필체 특징(Selected handwriting features)'을 언급할 뿐, 이 특징들이 '수학 모델'이나 '공중 및 표면의 운동 변수'를 통해 추출되었다는 내용은 전혀 포함하고 있지 않습니다."
+          },
+          {
+            "claim": "특별히 설계된 나선형 도구에 의존해야 해서 일반적인 환경에서는 적용하기 어려웠습니다.",
+            "label": "unsupported",
+            "reason": "Gold evidence에는 연구 방법의 물리적 제약(특정 장비 의존성)이나 일반 환경에서의 적용 가능성에 대한 언급이 없습니다."
+          },
+          {
+            "claim": "실시간으로 결과를 얻는 것까지는 가능했지만, 질병의 진행 상황을 파악하는 데에는 한계가 있었어요.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 실시간 결과 도출 여부나 '질병 진행 상황'에 대한 구체적인 한계를 언급하고 있지 않습니다."
+          },
+          {
+            "claim": "분석 샘플도 제한적이었고, 더 넓은 범위에서 연구를 확장해야 했습니다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 분석 샘플의 제한성이나 추가적인 연구 확장의 필요성에 대해 언급하고 있지 않습니다."
+          }
+        ],
+        "expected_claims_covered": [
+          false,
+          false
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": false,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_gradcam_training_setup",
+      "question": "Grad-CAM 나선 모델은 어떤 최적화 설정과 평가 지표를 사용했나요?",
+      "answer": "Grad-CAM 나선 모델은 데이터 전처리 과정에서 Min-max 스케일링을 사용해 특징 값을 0~1 범위로 정규화했어요. 이 방법은 식 (1)에 따라 최소값과 최대값을 기준으로 계산했죠(출처: 나선형 그리기그래드캠.pdf, p.3). 모델 평가에서는 정확도와 손실률을 주요 지표로 썼는데요, 훈련 세트에서는 약 99%의 높은 정확도를 보였고, 검증 세트에서는 약 85% 정도의 정확도를 달성했어요(출처: 나선형 그리기그래드캠.pdf, p.5). 또한 손실률 측면에서도 훈련 손실은 거의 0에 가까워졌고, 검증 손실은 0.5~0.6 사이에서 안정적으로 유지되었어요(출처: 나선형 그리기그래드캠.pdf, p.5).\n\n참고한 논문: 나선형 그리기그래드캠.pdf 1쪽, 나선형 그리기그래드캠.pdf 3쪽, 나선형 그리기그래드캠.pdf 5쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "Grad-CAM 나선 모델은 데이터 전처리 과정에서 Min-max 스케일링을 사용해 특징 값을 0~1 범위로 정규화했어요.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 최적화 설정과 평가 지표에 대한 내용만 포함하고 있으며, 데이터 전처리 방법(Min-max 스케일링)에 대해서는 언급하지 않았습니다."
+          },
+          {
+            "claim": "이 방법은 식 (1)에 따라 최소값과 최대값을 기준으로 계산했죠.",
+            "label": "unsupported",
+            "reason": "Gold evidence나 Gold pages [3]에는 해당 스케일링 방식이나 수식(식 1)에 대한 언급이 없습니다."
+          },
+          {
+            "claim": "모델 평가에서는 정확도와 손실률을 주요 지표로 썼는데요, 훈련 세트에서는 약 99%의 높은 정확도를 보였고, 검증 세트에서는 약 85% 정도의 정확도를 달성했어요.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 평가 지표(accuracy, precision, recall 등)를 나열할 뿐, '손실률'을 언급하지 않았으며, 구체적인 수치(99%, 85%)나 성능 비교 결과에 대한 정보가 없습니다. 또한, Gold pages는 [3]으로 제한되어 있어 p.5의 내용은 참고할 수 없습니다."
+          },
+          {
+            "claim": "또한 손실률 측면에서도 훈련 손실은 거의 0에 가까워졌고, 검증 손실은 0.5~0.6 사이에서 안정적으로 유지되었어요.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 '손실률'에 대한 언급이 전혀 없으며, 구체적인 수치(0.5~0.6) 역시 Gold source 내에서 확인할 수 없습니다."
+          }
+        ],
+        "expected_claims_covered": [
+          false,
+          false
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": false,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_gradcam_mechanism",
+      "question": "Grad-CAM 위치 지도는 어떤 정보로 만들어지나요?",
+      "answer": "Grad-CAM 위치 지도는 모델이 예측을 내릴 때 중요한 영역을 찾기 위해 만들어집니다. 이 지도는 마지막 컨볼루션 층의 기울기를 이용해 특정 지역의 중요도를 계산합니다(출처: 나선형 그리기그래드캠.pdf, p.4). 그 후, 이 중요도 값을 특징 맵과 결합해 위치 지도를 만듭니다(출처: 나선형 그리기그래드캠.pdf, p.4). 이 과정에서 불규칙한 선의 매끄러움이나 흔들림 패턴, 나선형 형태 같은 특징이 강조됩니다.\n\n참고한 논문: 나선형 그리기그래드캠.pdf 4쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "Grad-CAM 위치 지도는 모델이 예측을 내릴 때 중요한 영역을 찾기 위해 만들어진다.",
+            "label": "supported",
+            "reason": "Gold evidence에 'indicating regions important to predictions'라고 명시되어 있어, 예측에 중요한 영역을 나타내는 목적임을 뒷받침합니다."
+          },
+          {
+            "claim": "이 지도는 마지막 컨볼루션 층의 기울기를 이용해 특정 지역의 중요도를 계산한다.",
+            "label": "supported",
+            "reason": "Gold evidence에 'Grad-CAM uses gradients from the last convolutional layer'라고 명시되어 있어, 마지막 합성곱 층의 그래디언트를 사용함을 뒷받침합니다."
+          },
+          {
+            "claim": "이 중요도 값을 특징 맵과 결합해 위치 지도를 만든다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 Grad-CAM이 마지막 합성곱 층의 그래디언트를 사용하여 위치 지도를 '생성한다(produce)'고만 언급할 뿐, 중요도 값을 특징 맵과 '결합하는' 구체적인 과정은 설명하지 않습니다."
+          },
+          {
+            "claim": "불규칙한 선의 매끄러움이나 흔들림 패턴, 나선형 형태 같은 특정 특징이 강조된다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 위치 지도가 '예측에 중요한 영역'을 나타낸다고만 일반화하여 설명할 뿐, 답변에서 언급된 '불규칙한 선', '매끄러움 패턴', '나선형 형태'와 같은 구체적인 특징의 예시는 포함하고 있지 않습니다."
+          }
+        ],
+        "expected_claims_covered": [
+          true,
+          true
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": true,
+        "citation_page_correct": true,
+        "diagnostic_overclaim": false
+      }
+    },
+    {
+      "id": "blind_cnn_filter_progression",
+      "question": "나선 CNN은 특징을 단순한 것부터 복잡한 것으로 어떻게 추출했나요?",
+      "answer": "나선형 그리기에서 CNN은 먼저 손글씨의 기본적인 특징, 예를 들어 선이 어떻게 이어지는지를 보고 시작해요. 그런 다음 점차 더 복잡한 요소,比如 손글씨 속 흔들림이나 압력 변화 같은 것까지 분석하게 되죠. 이런 단계적 방법으로 CNN은 손글씨의 상태를 정확하게 판단할 수 있게 돼요. 이 과정에서는 신경망이 데이터에서 중요한 패턴을 스스로 학습하게 하면서, 복잡한 특징도 점차 이해하게 되는 거예요. (출처: 나선형 그리기그래드캠.pdf, p.5)\n\n참고한 논문: 나선형 그리기그래드캠.pdf 5쪽, 나선형그리기와 파킨슨.pdf 1쪽, 나선형 그리기그래드캠.pdf 1쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "CNN은 먼저 손글씨의 기본적인 특징(예: 선이 어떻게 이어지는지)을 보고 시작한다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 CNN이 32, 64, 128 필터를 순차적으로 사용하고 MaxPool 레이어를 거친다는 기술적 구조에 대해서만 설명하며, '기본적인 특징'이나 '선 연결 방식'과 같은 개념적 설명을 포함하지 않습니다."
+          },
+          {
+            "claim": "그런 다음 점차 더 복잡한 요소(예: 손글씨 속 흔들림이나 압력 변화)까지 분석한다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 필터 수 증가와 공간 크기 감소라는 기술적 과정을 설명할 뿐, '흔들림'이나 '압력 변화' 같은 특정 복잡한 요소에 대한 언급은 없습니다."
+          },
+          {
+            "claim": "이러한 단계적 방법으로 CNN은 손글씨의 상태를 정확하게 판단할 수 있게 된다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 네트워크가 특징을 추출하는 *방법* (필터 증가, 풀링)만을 설명하며, 이 과정이 '손글씨의 상태를 정확하게 판단한다'는 기능적 결론이나 성능에 대한 언급은 없습니다."
+          },
+          {
+            "claim": "신경망이 데이터에서 중요한 패턴을 스스로 학습하면서 복잡한 특징도 점차 이해하게 된다.",
+            "label": "unsupported",
+            "reason": "Gold evidence는 네트워크가 필터와 풀링을 통해 데이터를 처리하는 *구조적 메커니즘*만을 설명하며, '스스로 학습한다'거나 '점차 이해한다'는 과정의 주관적인 해석이나 개념적 설명을 포함하지 않습니다."
+          }
+        ],
+        "expected_claims_covered": [
+          false,
+          false
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": true,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_older_material_readability",
+      "question": "고령자를 위한 건강자료의 읽기 난이도에는 어떤 문제가 보고됐나요?",
+      "answer": "고령자의 건강 관련 자료를 읽는 데 있어 난이도가 있는 문제가 보고되었습니다. 2003년 NAAL 조사에서는 60세 이상의 성인 중 71%가 서술형 자료를 이해하는 데 어려움을 겪었고, 80%는 양식이나 차트 같은 문서를 사용하는 데 문제가 있었으며, 68%는 수치나 통계 관련 작업에 어려움을 느꼈습니다(출처: 노인친화적 설명.pdf, p.11). 이로 인해 건강 정보를 이해하고 적절히 활용하는 데 있어 고령자가 겪는 한계가 분명하게 나타났습니다.\n\n참고한 논문: 노인친화적 설명.pdf 11쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "고령자의 건강 관련 자료를 읽는 데 있어 난이도가 있는 문제가 보고되었습니다.",
+            "label": "unsupported",
+            "reason": "제공된 Gold evidence와 Gold pages([12])에는 이 주장을 직접적으로 뒷받침하는 내용이 없습니다. 답변에서 인용한 p.11의 구체적인 통계 자료는 Gold source/pages에 포함되어 있지 않습니다."
+          },
+          {
+            "claim": "2003년 NAAL 조사에서는 60세 이상의 성인 중 71%가 서술형 자료를 이해하는 데 어려움을 겪었고, 80%는 양식이나 차트 같은 문서를 사용하는 데 문제가 있었으며, 68%는 수치나 통계 관련 작업에 어려움을 느꼈습니다.",
+            "label": "unsupported",
+            "reason": "이 주장은 특정 연도(2003년), 조사 기관(NAAL), 그리고 구체적인 백분율 데이터(71%, 80%, 68%)를 포함하고 있습니다. 이 모든 내용은 제공된 Gold evidence나 Gold pages([12])에 전혀 언급되어 있지 않습니다."
+          },
+          {
+            "claim": "이로 인해 건강 정보를 이해하고 적절히 활용하는 데 있어 고령자가 겪는 한계가 분명하게 나타났습니다.",
+            "label": "unsupported",
+            "reason": "이 주장은 앞선 두 주장(p.11의 통계 자료)에 기반한 결론적 해석입니다. 해당 p.11의 구체적인 데이터 자체가 Gold source/pages([12])에서 뒷받침되지 않기 때문에, 이 결론 역시 엄격하게는 Unsupported로 평가됩니다."
+          }
+        ],
+        "expected_claims_covered": [
+          false,
+          false
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": false,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_older_numeric_risk",
+      "question": "고령자에게 확률과 위험 수치를 설명할 때 왜 주의해야 하나요?",
+      "answer": "고령자에게 확률과 위험 수치를 설명할 때는 정보가 명확하고 쉽게 이해될 수 있도록 해야 합니다. 이는 고령자가 복잡한 통계나 숫자를 잘 받아들이기 어려울 수 있기 때문입니다. 예를 들어, '71.5%의 미국 65세 이상 인구' 같은 수치는 단순히 숫자로 보일 뿐, 실제 생활에 어떤 영향을 줄지 알기 어렵습니다(출처: 노인친화적 설명.pdf, p.8). 따라서 정보를 전달할 때는 구체적인 예시나 실생활과 연결된 내용으로 설명하는 것이 중요합니다.\n\n또한, 고령자는 기억력이나 이해력이 감소할 수 있어 반복적으로 설명하거나, 중요한 부분을 강조해야 합니다(출처: 노인친화적 설명.pdf, p.19). 이는 정보를 효과적으로 전달하고, 오해나 혼동을 줄이는 데 도움이 됩니다.\n\n마지막으로, 고령자의 건강 정보에 대한 이해도가 낮은 경우가 많기 때문에, 의사와 같은 전문가의 직접적인 설명이나 피드백 없이는 수치만으로는 충분히 판단하기 어렵습니다(출처: 노인친화적 설명.pdf, p.35).\n\n참고한 논문: 노인친화적 설명.pdf 19쪽, 노인친화적 설명.pdf 8쪽, 노인친화적 설명.pdf 35쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "숫자로 된 오즈와 위험 수치는 이해하기 매우 어렵다.",
+            "label": "supported",
+            "reason": "Gold evidence에 명시된 'Understanding health information in terms of numerical odds and risk is very difficult'라는 내용이 이를 직접적으로 뒷받침합니다."
+          },
+          {
+            "claim": "숫자로 된 오즈와 위험 수치는 건강 정보 이해에서 가장 어려운 개념 중 하나이다.",
+            "label": "supported",
+            "reason": "Gold evidence에 명시된 'and is one of the most difficult concepts in health literacy'라는 내용이 이를 직접적으로 뒷받침합니다."
+          }
+        ],
+        "expected_claims_covered": [
+          true,
+          true
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": true,
+        "citation_page_correct": false,
+        "diagnostic_overclaim": true
+      }
+    },
+    {
+      "id": "blind_plain_language",
+      "question": "공공 건강정보에서 쉬운 말 사용은 왜 중요한가요?",
+      "answer": "공공 건강정보에서 쉬운 말을 사용하는 이유는, 특히 어르신들이 정보를 이해하기 쉽기 때문입니다. 노인 친화적인 설명이 필요하다고 해서, 전문 용어나 복잡한 문장을 쓰면 오히려 혼란스러울 수 있어요. 쉬운 말로 설명하면, 의사소통이 원활해지고 건강 정보를 올바르게 이해할 수 있게 돼요(출처: 노인친화적 설명.pdf, p.34).  \n\n또한, 말을 하면서 속도나 문장 길이, 어휘 선택 등도 중요합니다. 사람들이 말을 듣고 이해하는 방식은 다양해서, 모두가 같은 방식으로 정보를 받아들이지 않아요. 그래서 쉬운 말로 설명하면 더 많은 사람들에게 도움이 될 수 있어요(출처: 노인친화적 설명.pdf, p.12).  \n\n이러한 방법을 사용하면, 건강 관련 내용을 정확하게 전달할 수 있고, 사람들이 실천하기도 편해집니다. 정보가 명확하고 간단하다면, 더 많은 사람들이 건강을 잘 관리할 수 있을 거예요.\n\n참고한 논문: 노인친화적 설명.pdf 34쪽, 노인친화적 설명.pdf 12쪽",
+      "grade": {
+        "claims": [
+          {
+            "claim": "쉬운 말 원칙은 특히 고령자에게 도움이 된다",
+            "label": "supported",
+            "reason": "Gold evidence에 'especially older adults'가 언급되어 있어, 쉬운 말 원칙이 고령자에게 큰 이점을 제공한다는 주장을 직접적으로 뒷받침합니다."
+          },
+          {
+            "claim": "공공기관이 일관되게 적용하면 건강정보를 빠르게 개선할 수 있다",
+            "label": "supported",
+            "reason": "Gold evidence에 'uniform application of plain-language principles... could improve health information quickly'가 언급되어 있어, 공공기관의 일관된 적용을 통해 건강 정보가 신속하게 개선될 수 있다는 주장을 직접적으로 뒷받침합니다."
+          },
+          {
+            "claim": "전문용어를 많이 쓸수록 좋다",
+            "label": "unsupported",
+            "reason": "Gold evidence는 쉬운 말 원칙의 이점을 설명할 뿐, 전문 용어 사용이 좋다는 주장을 전혀 언급하지 않습니다."
+          },
+          {
+            "claim": "쉬운 말은 정확성을 반드시 떨어뜨린다",
+            "label": "unsupported",
+            "reason": "Gold evidence는 쉬운 말이 건강 정보를 개선(improve health information)한다고 주장하며, 정확성이 떨어진다는 주장은 언급되지 않았습니다."
+          }
+        ],
+        "expected_claims_covered": [
+          true,
+          true
+        ],
+        "forbidden_claim_present": false,
+        "citation_source_correct": true,
+        "citation_page_correct": true,
+        "diagnostic_overclaim": false
+      }
+    }
+  ]
+}

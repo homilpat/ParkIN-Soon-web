@@ -1,18 +1,36 @@
 {
-  "method": "auc_weighted_average",
+  "method": "reliability_uncertainty_dynamic",
   "weights": {
-    "olf": 0.329815,
-    "img": 0.346115,
-    "kin": 0.32407
+    "olf": 0.376154649307279,
+    "img": 0.345790714654835,
+    "kin": 0.278054636037886
   },
   "auc_scores": {
-    "olf": 0.775,
-    "img": 0.8133,
+    "olf": 0.8537593984962406,
+    "img": 0.8252032520325203,
     "kin": 0.7615
   },
+  "thresholds": {
+    "olf": 0.4488094796813394,
+    "img": 0.3898262083530426,
+    "kin": 0.5418
+  },
+  "dynamic_weighting": {
+    "reliability": "max(AUC - 0.5, 0.01)",
+    "uncertainty_factor": "0.5 + 0.5 * normalized_distance_from_threshold",
+    "quality_floor": 0.0,
+    "note": "Rule-based screening fusion until paired three-modality validation data are available"
+  },
   "description": {
-    "olf": "PPMI BSIT12+SCOPA - XGBoost 5-Fold CV",
-    "img": "Spiral drawing CNN (MobileNetV2) - Holdout",
+    "olf": "PPMI baseline BSIT12+SCOPA - LogisticRegression nested threshold CV",
+    "img": "Domain-augmented MobileNetV2 5-fold ensemble - development subject-grouped OOF; external validation pending",
     "kin": "UCI+PaHaW kinematic RF - 5-Fold CV mean"
-  }
+  },
+  "image_model_files": [
+    "drawing_domain_fold_1.keras",
+    "drawing_domain_fold_2.keras",
+    "drawing_domain_fold_3.keras",
+    "drawing_domain_fold_4.keras",
+    "drawing_domain_fold_5.keras"
+  ]
 }

@@ -1,7 +1,7 @@
 """
 Parkin Soon (박인순) - 파킨슨병 조기 선별 키오스크
 필요 파일 (modeling 폴더):
-  olf_con_model.pkl / drawing_cnn_model.h5 / drawing_kinematic_model.pkl
+  olf_con_model.pkl / drawing_domain_fold_*.keras / drawing_kinematic_model.pkl
   fusion_config.json / hospital_data.xlsx
 """
 
@@ -21,6 +21,7 @@ import json
 import re
 import sqlite3
 from streamlit_drawable_canvas import st_canvas
+from spiral_preprocessing import align_spiral_rgb
 from pathlib import Path
 import joblib
 import numpy as np
@@ -32,6 +33,11 @@ from PIL import Image, ImageDraw
 import folium
 from streamlit_folium import st_folium
 import streamlit.elements.image as st_image
+from late_fusion import (
+    calculate_dynamic_fusion_score,
+    load_stage_thresholds,
+    majority_vote_stage,
+)
 
 APP_DIR = Path(__file__).resolve().parent
 
@@ -80,9 +86,10 @@ FUSION_CONFIG_FILE = "fusion_config.json"
 CANVAS_SIZE        = 400
 IMAGE_MODEL_SIZE   = (224, 224)
 
-T_OLF = 0.4617
-T_IMG = 0.4510
-T_KIN = 0.5418
+STAGE_THRESHOLDS = load_stage_thresholds(MODEL_DIR / FUSION_CONFIG_FILE)
+T_OLF = STAGE_THRESHOLDS["olf"]
+T_IMG = STAGE_THRESHOLDS["img"]
+T_KIN = STAGE_THRESHOLDS["kin"]
 NORMAL_OLF_PCT = 90.0
 NORMAL_BOWEL_SCORE = 1.0
 
@@ -290,6 +297,7 @@ def init_customer_db():
                 p_olf REAL,
                 p_img REAL,
                 p_kin REAL,
+                fusion_score REAL,
                 abnormal_count INTEGER,
                 risk_level TEXT,
                 olf_results_json TEXT,
@@ -304,6 +312,7 @@ def init_customer_db():
             "olf_results_json": "TEXT",
             "scopa_results_json": "TEXT",
             "canvas_json": "TEXT",
+            "fusion_score": "REAL",
         }.items():
             if col_name not in existing_cols:
                 conn.execute(f"ALTER TABLE customer_records ADD COLUMN {col_name} {col_type}")
@@ -328,6 +337,7 @@ def update_customer_result(
     p_olf,
     p_img,
     p_kin,
+    fusion_score,
     abnormal_count,
     risk_level,
     olf_results,
@@ -342,7 +352,7 @@ def update_customer_result(
             """
             UPDATE customer_records
                SET updated_at = ?, olf_score = ?, scopa_score = ?,
-                   p_olf = ?, p_img = ?, p_kin = ?,
+                   p_olf = ?, p_img = ?, p_kin = ?, fusion_score = ?,
                    abnormal_count = ?, risk_level = ?,
                    olf_results_json = ?, scopa_results_json = ?, canvas_json = ?
              WHERE id = ?
@@ -354,6 +364,7 @@ def update_customer_result(
                 p_olf,
                 p_img,
                 p_kin,
+                fusion_score,
                 abnormal_count,
                 risk_level,
                 json.dumps(olf_results, ensure_ascii=False),
@@ -682,6 +693,8 @@ def load_models(md):
     mp = Path(md)
     m_olf = joblib.load(req(mp / OLF_MODEL_FILE))
     m_olf = force_single_thread_prediction(m_olf)
+    with open(req(mp / FUSION_CONFIG_FILE), encoding="utf-8") as f:
+        fusion_config = json.load(f)
     
     # InputLayer 호환성 패치
     import tensorflow as tf
@@ -703,20 +716,21 @@ def load_models(md):
     with tf.keras.utils.custom_object_scope({'InputLayer': CompatInputLayer}):
         import tempfile, shutil, os
         # 텐서플로우의 한글 경로 인코딩 버그를 완벽히 피하기 위해 임시 폴더(영문 경로)로 복사 후 로드
-        temp_path = os.path.join(tempfile.gettempdir(), IMAGE_MODEL_FILE)
-        shutil.copy2(str(mp / IMAGE_MODEL_FILE), temp_path)
-        m_img = tf.keras.models.load_model(temp_path, compile=False)
-        try:
-            os.remove(temp_path)
-        except:
-            pass
+        image_files = fusion_config.get("image_model_files", [IMAGE_MODEL_FILE])
+        m_img = []
+        for index, filename in enumerate(image_files):
+            temp_path = os.path.join(tempfile.gettempdir(), f"parkinsoon_img_{index}.keras")
+            shutil.copy2(str(req(mp / filename)), temp_path)
+            m_img.append(tf.keras.models.load_model(temp_path, compile=False))
+            try:
+                os.remove(temp_path)
+            except OSError:
+                pass
     
     kd = joblib.load(req(mp / KIN_MODEL_FILE))
     m_kin = kd["pipeline"] if isinstance(kd, dict) and "pipeline" in kd else kd
     m_kin = force_single_thread_prediction(m_kin)
-    with open(req(mp / FUSION_CONFIG_FILE), encoding="utf-8") as f:
-        weights = json.load(f)["weights"]
-    return m_olf, m_img, m_kin, weights
+    return m_olf, m_img, m_kin, fusion_config
 
 def get_img_base64(path):
     import base64
@@ -835,6 +849,13 @@ def pred_proba(model, features):
         return float(p[0, 1] if p.ndim == 2 and p.shape[1] >= 2 else p.ravel()[0])
     return float(np.asarray(model.predict(x)).ravel()[0])
 
+def image_ensemble_probability(models, image_batch):
+    probabilities = [
+        float(np.asarray(model.predict(image_batch, verbose=0)).ravel()[0])
+        for model in models
+    ]
+    return float(np.mean(probabilities))
+
 def extract_drawing_only(img_arr):
     """캔버스에서 사용자가 그린 선만 추출합니다."""
     rgba = np.asarray(img_arr, dtype=np.float32)
@@ -845,13 +866,15 @@ def extract_drawing_only(img_arr):
     drawing = rgba[:, :, :3] * alpha + white * (1.0 - alpha)
     return drawing.astype(np.uint8)
 
-def preprocess_canvas(img_arr):
+def preprocess_canvas(img_arr, align=False):
     arr = np.asarray(img_arr, dtype=np.float32)
     if arr.shape[2] == 3:
         comp = arr
     else:
         alpha = arr[:, :, 3:4] / 255.0
         comp = arr[:, :, :3] * alpha + 255.0 * (1.0 - alpha)
+    if align:
+        comp = align_spiral_rgb(comp, output_size=IMAGE_MODEL_SIZE[0])
     t = tf.image.resize(tf.convert_to_tensor(comp, tf.float32), IMAGE_MODEL_SIZE)
     t = tf.repeat(tf.image.rgb_to_grayscale(t), 3, axis=-1) / 255.0
     return np.expand_dims(t.numpy().astype(np.float32), 0)
@@ -877,6 +900,35 @@ def get_kin_feats(cj):
         f = extract_kin(x, y, t)
         return [f[c] for c in FEATURE_COLS]
     except: return [0.5] * len(FEATURE_COLS)
+
+
+def assess_modality_quality(olf_results, scopa_results, canvas_json):
+    """실제 키오스크 입력의 완전성과 손그림 측정 품질을 0~1로 요약합니다."""
+    olf_complete = min(len(olf_results) / 12.0, 1.0)
+    scopa_complete = min(len(scopa_results) / 3.0, 1.0)
+    olf_quality = 0.8 * olf_complete + 0.2 * scopa_complete
+
+    x = np.asarray(canvas_json.get("x", []), dtype=float)
+    y = np.asarray(canvas_json.get("y", []), dtype=float)
+    t = np.asarray(canvas_json.get("t", []), dtype=float)
+    finite = len(x) >= 10 and len(x) == len(y) == len(t) and np.isfinite(np.r_[x, y, t]).all()
+    if not finite:
+        return {"olf": olf_quality, "img": 0.0, "kin": 0.0}
+
+    point_quality = min(len(x) / 120.0, 1.0)
+    coverage = min(((np.ptp(x) * np.ptp(y)) ** 0.5) / (CANVAS_SIZE * 0.45), 1.0)
+    img_quality = 0.55 * point_quality + 0.45 * coverage
+
+    dt = np.diff(t)
+    duration_seconds = max((t[-1] - t[0]) / 1000.0, 0.0)
+    monotonic_ratio = float(np.mean(dt > 0)) if len(dt) else 0.0
+    duration_quality = min(duration_seconds / 5.0, 1.0) if duration_seconds <= 120 else 0.0
+    kin_quality = 0.45 * point_quality + 0.35 * monotonic_ratio + 0.20 * duration_quality
+    return {
+        "olf": float(np.clip(olf_quality, 0.0, 1.0)),
+        "img": float(np.clip(img_quality, 0.0, 1.0)),
+        "kin": float(np.clip(kin_quality, 0.0, 1.0)),
+    }
 
 def make_gradcam(img_array, model):
     img_var = tf.Variable(img_array.astype(np.float32))
@@ -991,7 +1043,7 @@ def drawing_local_comment(p_img, p_kin, shape_comment, kin_comment):
         )
     return color, emphasize_symptoms(body)
 
-def final_local_comment(cnt, olf_score, con_score, p_olf, p_img, p_kin):
+def final_local_comment(cnt, olf_score, con_score, p_olf, p_img, p_kin, valid_count=3):
     olf_bowel_note = []
     if olf_score < 9:
         olf_bowel_note.append("냄새를 구별하는 힘이 낮아진 신호가 있을 수 있습니다")
@@ -1008,7 +1060,14 @@ def final_local_comment(cnt, olf_score, con_score, p_olf, p_img, p_kin):
     if not drawing_notes:
         drawing_notes.append("손그림 항목에서는 큰 이상 신호가 뚜렷하지 않습니다")
 
-    if cnt == 0:
+    if valid_count < 2:
+        color = C_ORANGE
+        body = (
+            f"{report_label('판정')} 검사 품질 확인 필요<br>"
+            f"{report_label('설명')} 판정에 사용할 수 있는 검사가 두 개보다 적습니다.<br>"
+            f"{report_label('다음 행동')} 손그림을 천천히 다시 그리고 모든 문항에 답한 뒤 재검사해 주세요."
+        )
+    elif cnt == 0:
         color = C_GREEN
         body = (
             f"{report_label('위험도 점수')} 낮음<br>"
@@ -1048,7 +1107,11 @@ init_state()
 init_customer_db()
 
 try:
-    m_olf, m_img, m_kin, weights = load_models(str(MODEL_DIR))
+    m_olf, m_img, m_kin, fusion_config = load_models(str(MODEL_DIR))
+    configured_thresholds = fusion_config.get("thresholds", {})
+    T_OLF = float(configured_thresholds.get("olf", T_OLF))
+    T_IMG = float(configured_thresholds.get("img", T_IMG))
+    T_KIN = float(configured_thresholds.get("kin", T_KIN))
 except Exception as e:
     st.error(f"모델 로드 실패: {e}\n모델 폴더: {MODEL_DIR}"); st.stop()
 
@@ -1266,26 +1329,57 @@ elif st.session_state.step == 4:
     p_olf = pred_proba(m_olf, combined)
     if st.session_state.canvas_img is None:
         st.error("손그림 이미지가 없습니다. 처음부터 다시 진행해주세요."); st.stop()
-    p_img = float(np.asarray(m_img.predict(preprocess_canvas(st.session_state.canvas_img), verbose=0)).ravel()[0])
+    p_img = image_ensemble_probability(m_img, preprocess_canvas(st.session_state.canvas_img))
     p_kin = pred_proba(m_kin, get_kin_feats(st.session_state.get("canvas_json", {})))
+    modality_quality = assess_modality_quality(
+        st.session_state.olf_results,
+        st.session_state.scopa_results,
+        st.session_state.get("canvas_json", {}),
+    )
+    fusion_score, fusion_weights, fusion_details = calculate_dynamic_fusion_score(
+        p_olf,
+        p_img,
+        p_kin,
+        quality_scores=modality_quality,
+        config_path=MODEL_DIR / FUSION_CONFIG_FILE,
+    )
 
-    cnt = int(p_olf >= T_OLF) + int(p_img >= T_IMG) + int(p_kin >= T_KIN)
+    majority_result = majority_vote_stage(
+        {"olf": p_olf, "img": p_img, "kin": p_kin},
+        {"olf": T_OLF, "img": T_IMG, "kin": T_KIN},
+        quality_scores=modality_quality,
+    )
+    cnt = majority_result["positive_count"]
+    vote_labels = {
+        name: "기권" if vote is None else ("1 · 위험 신호" if vote == 1 else "0 · 정상 범위")
+        for name, vote in majority_result["votes"].items()
+    }
 
     # ── 종합 결과 변수 ────────────────────────────────────────────────────────
-    if cnt == 0:
+    if majority_result["stage"] == "retest":
+        ri = "🔄"; rc = C_ORANGE; rb = "#fff7ed"; rbd = "#fed7aa"; rl = "retest"
+        rt = "검사 품질을 다시 확인해주세요"
+        rs = "판정에 사용할 수 있는 검사가 두 개보다 적습니다."
+        ra = "손그림을 천천히 다시 그리고 모든 문항에 답해주세요."
+    elif cnt == 0:
         ri = "✅"; rc = C_GREEN; rb = "#f0fdf4"; rbd = "#86efac"; rl = "low"
-        rt = "특이 징후가 발견되지 않았습니다"
+        rt = "낮은 주의 단계입니다"
         rs = "세 가지 검사 항목 모두 정상 범위 이내입니다."
         ra = "정기적인 건강 검진을 꾸준히 받으시길 권장드립니다."
     elif cnt == 1:
         ri = "⚠️"; rc = C_ORANGE; rb = "#fff7ed"; rbd = "#fed7aa"; rl = "mid"
-        rt = "일부 항목에서 주의가 필요합니다"
+        rt = "단일 위험 신호가 관찰되었습니다"
         rs = "한 가지 검사 항목에서 이상 징후가 감지되었습니다."
         ra = "전문의와 상담해 보시는 것을 권장드립니다."
-    else:
+    elif cnt == 2:
         ri = "🔴"; rc = C_RED; rb = "#fef2f2"; rbd = "#fca5a5"; rl = "high"
-        rt = "복수의 항목에서 이상 징후가 감지되었습니다"
-        rs = f"{cnt}가지 검사 항목에서 동시에 이상 징후가 확인되었습니다."
+        rt = "다수결 위험 신호 주의 단계입니다"
+        rs = "세 검사 중 두 검사에서 위험 신호가 확인되었습니다."
+        ra = "전문의의 소견을 받아보시길 권장드립니다."
+    else:
+        ri = "🔴"; rc = C_RED; rb = "#fef2f2"; rbd = "#fca5a5"; rl = "very_high"
+        rt = "세 검사 모두 위험 신호를 보였습니다"
+        rs = "세 검사 모두에서 동시에 위험 신호가 확인되었습니다."
         ra = "전문의의 소견을 받아보시길 권장드립니다."
 
     if not st.session_state.get("result_saved", False):
@@ -1296,6 +1390,7 @@ elif st.session_state.step == 4:
             p_olf=p_olf,
             p_img=p_img,
             p_kin=p_kin,
+            fusion_score=fusion_score,
             abnormal_count=cnt,
             risk_level=rl,
             olf_results=st.session_state.get("olf_results", []),
@@ -1407,7 +1502,7 @@ elif st.session_state.step == 4:
 
         img_input = preprocess_canvas(st.session_state.canvas_img)
         try:
-            gradcam_img = make_gradcam(img_input, m_img)
+            gradcam_img = make_gradcam(img_input, m_img[0])
             col_orig, col_cam = st.columns(2)
             with col_orig:
                 st.markdown("**원본 나선 그림**")
@@ -1505,9 +1600,10 @@ elif st.session_state.step == 4:
     <strong style="color:#334155;">판정 기준 안내</strong><br>
     각 항목의 임계값은 해당 데이터셋에서 Youden's Index로 산출된 최적값입니다.<br>
     이상 감지된 항목 수를 기준으로 종합 결과를 도출합니다.<br>
-    &nbsp;• 0개 이상 → 특이 징후 없음 &nbsp;
-    &nbsp;• 1개 이상 → 주의 필요 &nbsp;
-    &nbsp;• 2개 이상 → 전문의 소견 권유
+    &nbsp;• 0표 → 낮은 주의 단계 &nbsp;
+    &nbsp;• 1표 → 단일 신호 관찰 &nbsp;
+    &nbsp;• 2표 → 다수결 주의 &nbsp;
+    &nbsp;• 3표 → 높은 주의
 </div>""", unsafe_allow_html=True)
 
         # ── 신경과 찾기 (고위험만) ────────────────────────────────────────────
@@ -1626,16 +1722,27 @@ elif st.session_state.step == 4:
             <div style="font-size:18px;color:#64748b;margin-bottom:6px;">1. 후각+배변</div>
             <div style="font-size:28px;font-weight:900;color:{signal_color(p_olf, T_OLF)};">{p_olf * 100:.1f}%</div>
             <div style="font-size:17px;color:#475569;margin-top:8px;">후각 {olf_score}/12 · 배변 {con_score}/9</div>
+            <div style="font-size:17px;font-weight:800;color:{signal_color(p_olf, T_OLF)};margin-top:6px;">판정 {vote_labels['olf']}</div>
         </div>
         <div style="background:white;border:1.5px solid #dbeafe;border-radius:14px;padding:16px;">
             <div style="font-size:18px;color:#64748b;margin-bottom:6px;">2. 그림 모양</div>
             <div style="font-size:28px;font-weight:900;color:{signal_color(p_img, T_IMG)};">{p_img * 100:.1f}%</div>
             <div style="font-size:17px;color:#475569;margin-top:8px;">AI가 나선 모양에서 본 신호</div>
+            <div style="font-size:17px;font-weight:800;color:{signal_color(p_img, T_IMG)};margin-top:6px;">판정 {vote_labels['img']}</div>
         </div>
         <div style="background:white;border:1.5px solid #dbeafe;border-radius:14px;padding:16px;">
             <div style="font-size:18px;color:#64748b;margin-bottom:6px;">3. 손 움직임</div>
             <div style="font-size:28px;font-weight:900;color:{signal_color(p_kin, T_KIN)};">{p_kin * 100:.1f}%</div>
             <div style="font-size:17px;color:#475569;margin-top:8px;">이상 감지 {cnt}/3</div>
+            <div style="font-size:17px;font-weight:800;color:{signal_color(p_kin, T_KIN)};margin-top:6px;">판정 {vote_labels['kin']}</div>
+        </div>
+    </div>
+    <div style="background:white;border:2px solid #99d5db;border-radius:14px;
+                padding:16px;margin-top:14px;text-align:center;">
+        <div style="font-size:18px;color:#64748b;">파킨슨병 위험군 선별 보조 점수</div>
+        <div style="font-size:32px;font-weight:900;color:{C_GREEN};">{fusion_score * 100:.1f}점</div>
+        <div style="font-size:16px;color:#64748b;margin-top:5px;">
+            모델 신뢰도·이번 검사 품질·불확실도를 반영한 동적 점수이며, 진단 확률은 아닙니다.
         </div>
     </div>
     <div style="font-size:17px;color:#64748b;margin-top:12px;">
@@ -1672,7 +1779,7 @@ elif st.session_state.step == 4:
         st.markdown("## 3. 손그림 결과")
         img_input = preprocess_canvas(st.session_state.canvas_img)
         try:
-            gradcam_img = make_gradcam(img_input, m_img)
+            gradcam_img = make_gradcam(img_input, m_img[0])
             st.markdown("**원본 나선 그림**")
             st.image((img_input[0] * 255).astype(np.uint8), width=360)
             st.markdown("**AI가 중요하게 본 부분**")
@@ -1725,7 +1832,10 @@ elif st.session_state.step == 4:
     <div style="font-size:20px;color:#475569;line-height:1.7;">{rs}<br>{ra}</div>
 </div>""", unsafe_allow_html=True)
 
-        final_color, final_body = final_local_comment(cnt, olf_score, con_score, p_olf, p_img, p_kin)
+        final_color, final_body = final_local_comment(
+            cnt, olf_score, con_score, p_olf, p_img, p_kin,
+            valid_count=majority_result["valid_count"],
+        )
         local_comment_card("박인순의 최종 코멘트", final_body, final_color)
         previous_result = get_previous_customer_result(
             st.session_state.get("customer_name", ""),
@@ -1764,8 +1874,15 @@ tr = {
     "p_img": locals().get('p_img', None),
     "kin_prob": locals().get('p_kin', None),
     "p_kin": locals().get('p_kin', None),
+    "fusion_score": locals().get('fusion_score', None),
+    "fusion_method": "reliability_uncertainty_dynamic",
+    "fusion_weights": locals().get('fusion_weights', None),
+    "modality_quality": locals().get('modality_quality', None),
+    "signal_count": locals().get('cnt', None),
+    "risk_level": locals().get('rl', None),
+    "majority_result": locals().get('majority_result', None),
     "kin_feats": locals().get('kin_feats', None),
     "result_page": st.session_state.get("result_page", 1),
-    "final_risk": (locals().get('cnt', 0) / 3.0) if st.session_state.get("step") == 4 else None
+    "final_risk": locals().get('fusion_score', None)
 }
 ParkinsoonAI.render_parkinson_chatbot(tr)

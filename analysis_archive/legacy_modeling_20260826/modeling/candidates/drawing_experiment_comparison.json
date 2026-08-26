@@ -1,0 +1,25 @@
+{
+  "evaluation": "legacy 28-subject external set",
+  "unaligned_original_two_stage": {
+    "auc": 0.7025641025641025,
+    "sensitivity": 0.8,
+    "specificity": 0.46153846153846156
+  },
+  "center_scale_aligned_two_stage": {
+    "auc": 0.6871794871794872,
+    "sensitivity": 0.4,
+    "specificity": 0.9230769230769231
+  },
+  "constrained_frozen_ensemble_1x_augmentation": {
+    "auc": 0.7435897435897435,
+    "sensitivity": 0.8666666666666667,
+    "specificity": 0.5384615384615384,
+    "preferred_for_further_validation": true
+  },
+  "constrained_frozen_ensemble_3x_augmentation": {
+    "auc": 0.7179487179487181,
+    "sensitivity": 0.8,
+    "specificity": 0.6153846153846154
+  },
+  "deployment_status": "none_deployed"
+}

@@ -1,4 +1,25 @@
 .env
 modeling/customer_records.db
+/modeling/bge-reranker-v2-m3/
+# PPMI exports and derived tables contain participant identifiers.
+data/Participant_Status_*.csv
+data/SCOPA-AUT_*.csv
+data/University_of_Pennsylvania_Smell_Identification_Test_UPSIT_*.csv
+data/PPMI_BSIT12_SCOPA.csv
+data/codeList/
+data/external/
+data/parkinsons-drawings/
+.mplconfig/
 __pycache__/
 *.pyc
+# Archived experiment binaries and reference documents stay local.
+analysis_archive/**/*.keras
+analysis_archive/**/*.h5
+analysis_archive/**/*.npy
+analysis_archive/**/*.png
+analysis_archive/**/*.pdf
+analysis_archive/**/*.hwpx
+# Keep portfolio archives reproducible without publishing raw tables or model backups.
+analysis_archive/**/*.csv
+analysis_archive/**/*.xlsx
+analysis_archive/**/*.pkl

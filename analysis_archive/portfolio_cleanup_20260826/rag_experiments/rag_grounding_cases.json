@@ -1,0 +1,47 @@
+[
+  {
+    "id": "hyposmia_timing",
+    "question": "후각 저하는 파킨슨병 운동 증상보다 먼저 나타날 수 있나요?",
+    "source": "후각과 파킨슨 종단연구(10년).pdf",
+    "pages": [2],
+    "evidence": "A reduced sense of smell is one of the most frequent and earliest non-motor symptoms in Parkinson's disease. Hyposmia can be detected five to ten years prior to the first motor symptoms.",
+    "expected_claims": ["후각 저하는 초기 비운동 증상이다", "운동 증상보다 5~10년 먼저 감지될 수 있다"],
+    "forbidden_claims": ["후각 저하만으로 파킨슨병을 진단할 수 있다", "모든 후각 저하 환자가 파킨슨병에 걸린다"]
+  },
+  {
+    "id": "constipation_association",
+    "question": "변비는 파킨슨병보다 먼저 나타날 수 있고 위험과 관련이 있나요?",
+    "source": "변비와 파킨슨.pdf",
+    "pages": [10],
+    "evidence": "The analysis indicated that patients with constipation had a 2.36-fold increased risk of Parkinson's disease compared with those without constipation, and this association may last for decades.",
+    "expected_claims": ["변비의 연관성이 수십 년 앞서 나타날 수 있다", "메타분석에서 2.36배의 연관성이 보고됐다"],
+    "forbidden_claims": ["변비가 파킨슨병의 원인이다", "변비가 있으면 파킨슨병이 확정된다"]
+  },
+  {
+    "id": "prodromal_smell_test",
+    "question": "후각 검사는 전구기 파킨슨 위험을 확정할 수 있나요?",
+    "source": "전구기종합파킨슨증상.pdf",
+    "pages": [2],
+    "evidence": "Hyposmia is often one of the earliest prodromal features and can be objectively quantified with tests such as the 12-item Brief Smell Identification Test. However, the likelihood of developing Parkinson's disease is unclear.",
+    "expected_claims": ["후각 저하는 초기 전구기 특징일 수 있다", "12문항 B-SIT로 객관적으로 측정할 수 있다", "발병 가능성은 명확하지 않다"],
+    "forbidden_claims": ["후각 검사로 발병 여부를 확정한다", "후각 검사 점수가 진단 확률이다"]
+  },
+  {
+    "id": "spiral_motor_signal",
+    "question": "나선 그리기는 어떤 파킨슨 운동 신호를 살펴보는 검사인가요?",
+    "source": "나선형그리기와 파킨슨.pdf",
+    "pages": [1],
+    "evidence": "Spiral drawing is a skilled and complex coordinated motor activity and is treated as a sensitive motor assessment. Early observable symptoms can include disorders in handwriting and repetitive spiral drawing tasks.",
+    "expected_claims": ["나선 그리기는 복합적인 협응 운동이다", "운동 기능을 민감하게 살펴보는 보조 평가다"],
+    "forbidden_claims": ["나선 그림만으로 파킨슨병을 진단한다", "그림 점수는 질병 발생 확률이다"]
+  },
+  {
+    "id": "gradcam_scope",
+    "question": "Grad-CAM은 나선 그림 AI 판단을 어떻게 설명하나요?",
+    "source": "나선형 그리기그래드캠.pdf",
+    "pages": [1],
+    "evidence": "The study integrates a convolutional neural network with attention mechanisms and Grad-CAM to provide qualitative visualization for spiral handwriting classification. Such visualization is explanatory support and does not establish a clinical diagnosis by itself.",
+    "expected_claims": ["CNN 판단에 주목한 영역을 정성적으로 시각화한다", "설명 보조 수단이다"],
+    "forbidden_claims": ["Grad-CAM이 질병 원인을 증명한다", "강조 영역이 임상 진단을 확정한다"]
+  }
+]

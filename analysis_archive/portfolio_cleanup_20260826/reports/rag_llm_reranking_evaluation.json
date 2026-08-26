@@ -1,0 +1,549 @@
+{
+  "dataset_role": "development_regression",
+  "summary": {
+    "cases": 30,
+    "source_page_recall_at_3": 0.6333333333333333
+  },
+  "results": [
+    {
+      "id": "hyposmia_timing",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 2
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 2
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "constipation_association",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 10
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "prodromal_smell_test",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 2
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 2
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "spiral_motor_signal",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 1
+        },
+        {
+          "source": "나선형그리기와 파킨슨.pdf",
+          "page": 1
+        },
+        {
+          "source": "나선형그리기와 파킨슨.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "gradcam_scope",
+      "source_page_hit": false,
+      "selected": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "id": "olfactory_prevalence",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "id": "olfactory_longitudinal_decline",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "olfactory_cognition_sensitivity",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "olfactory_cross_sectional_limit",
+      "source_page_hit": false,
+      "selected": [
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 4
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 4
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "smell_seven_scents",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 3
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 4
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "smell_seven_auc",
+      "source_page_hit": false,
+      "selected": [
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 28
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 28
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 28
+        }
+      ]
+    },
+    {
+      "id": "smell_prevalence_range",
+      "source_page_hit": false,
+      "selected": [
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "smell_cohort_size",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 3
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 3
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "smell_hyposmia_thresholds",
+      "source_page_hit": false,
+      "selected": [
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 25
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 25
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "smell_full_test_auc",
+      "source_page_hit": false,
+      "selected": [
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 27
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 9
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 9
+        }
+      ]
+    },
+    {
+      "id": "constipation_meta_sample",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "constipation_pooled_or",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "constipation_prodromal_prevalence",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 2
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "constipation_prior_meta",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 2
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 2
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "prodromal_neuron_loss",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 2
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 1
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "prodromal_motor_definition",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 1
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 2
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "prodromal_bowel_interval",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 3
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 3
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "prodromal_dysautonomia",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 4
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 4
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "prodromal_rbd_dat",
+      "source_page_hit": false,
+      "selected": [
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 3
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 3
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "spiral_dataset_accuracy",
+      "source_page_hit": false,
+      "selected": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 1
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 1
+        },
+        {
+          "source": "나선형그리기와 파킨슨.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "id": "spiral_kinematic_types",
+      "source_page_hit": false,
+      "selected": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 1
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 1
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "id": "gradcam_generalization_gap",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "id": "gradcam_sensitivity_specificity",
+      "source_page_hit": false,
+      "selected": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "id": "gradcam_augmentation",
+      "source_page_hit": false,
+      "selected": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "id": "spiral_prior_svm_metrics",
+      "source_page_hit": true,
+      "selected": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 1
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 2
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 2
+        }
+      ]
+    }
+  ]
+}

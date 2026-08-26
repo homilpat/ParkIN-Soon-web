@@ -1,0 +1,47 @@
+{
+  "model": "frozen MobileNetV2 features + weighted LogisticRegression",
+  "training_source": "HandPD Spiral",
+  "validation_unit": "subject",
+  "subjects": 54,
+  "images": 368,
+  "threshold_rule": "maximum specificity with OOF subject sensitivity >= 0.80",
+  "internal_grouped_oof": {
+    "auc": 0.9305555555555556,
+    "sensitivity": 1.0,
+    "specificity": 0.8333333333333334,
+    "threshold": 0.58945756778121,
+    "confusion_matrix": [
+      [
+        15,
+        3
+      ],
+      [
+        0,
+        36
+      ]
+    ]
+  },
+  "inner_fold_thresholds": [
+    0.6605394780635834,
+    0.6577378362417221,
+    0.6863170141975085,
+    0.6721845902502537,
+    0.7436913202206293
+  ],
+  "external_legacy_28_subjects": {
+    "auc": 0.7538461538461538,
+    "sensitivity": 0.2,
+    "specificity": 1.0,
+    "threshold": 0.58945756778121,
+    "confusion_matrix": [
+      [
+        13,
+        0
+      ],
+      [
+        12,
+        3
+      ]
+    ]
+  }
+}

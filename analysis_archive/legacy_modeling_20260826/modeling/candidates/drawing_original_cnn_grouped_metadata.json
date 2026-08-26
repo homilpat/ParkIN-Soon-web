@@ -1,0 +1,45 @@
+{
+  "model": "original MobileNetV2 two-stage fine-tuning with train-only augmentation",
+  "validation_unit": "subject",
+  "training": {
+    "source": "HandPD",
+    "subjects": 54,
+    "images": 368
+  },
+  "internal_grouped_oof_threshold_setting": {
+    "auc": 0.8858024691358025,
+    "sensitivity": 0.9166666666666666,
+    "specificity": 0.8888888888888888,
+    "f1": 0.9295774647887324,
+    "threshold": 0.5350207090377808,
+    "confusion_matrix": [
+      [
+        16,
+        2
+      ],
+      [
+        3,
+        33
+      ]
+    ]
+  },
+  "external_legacy_28_subjects": {
+    "auc": 0.7025641025641025,
+    "sensitivity": 0.8,
+    "specificity": 0.46153846153846156,
+    "f1": 0.7058823529411765,
+    "threshold": 0.5350207090377808,
+    "confusion_matrix": [
+      [
+        6,
+        7
+      ],
+      [
+        3,
+        12
+      ]
+    ]
+  },
+  "deployment_status": "candidate_pending_review_not_deployed",
+  "deployment_note": "External sensitivity reached 0.80, but specificity was below 0.50."
+}

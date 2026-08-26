@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "cases": 9,
+    "accuracy": 1.0,
+    "errors": 0
+  },
+  "results": [
+    {
+      "question": "후각 저하는 운동 증상보다 몇 년 먼저 나타나나요?",
+      "expected": "academic",
+      "predicted": "academic",
+      "correct": true
+    },
+    {
+      "question": "변비 메타분석의 통합 오즈비는 얼마인가요?",
+      "expected": "academic",
+      "predicted": "academic",
+      "correct": true
+    },
+    {
+      "question": "나선 모델의 민감도와 특이도는 얼마인가요?",
+      "expected": "academic",
+      "predicted": "academic",
+      "correct": true
+    },
+    {
+      "question": "집에서 어떤 운동을 하면 좋나요?",
+      "expected": "lifestyle",
+      "predicted": "lifestyle",
+      "correct": true
+    },
+    {
+      "question": "변비가 있는데 물과 음식은 어떻게 먹어야 하나요?",
+      "expected": "lifestyle",
+      "predicted": "lifestyle",
+      "correct": true
+    },
+    {
+      "question": "넘어지지 않으려면 생활에서 무엇을 조심해야 하나요?",
+      "expected": "lifestyle",
+      "predicted": "lifestyle",
+      "correct": true
+    },
+    {
+      "question": "변비가 위험과 관련 있나요, 생활에서는 뭘 해야 하나요?",
+      "expected": "mixed",
+      "predicted": "mixed",
+      "correct": true
+    },
+    {
+      "question": "후각 연구 근거와 일상 관리법을 함께 알려주세요.",
+      "expected": "mixed",
+      "predicted": "mixed",
+      "correct": true
+    },
+    {
+      "question": "나선 검사 신호의 연구 의미와 도움이 되는 운동을 함께 알려주세요.",
+      "expected": "mixed",
+      "predicted": "mixed",
+      "correct": true
+    }
+  ]
+}

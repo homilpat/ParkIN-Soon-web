@@ -1,0 +1,77 @@
+{
+  "status": "active_screening_candidate_pending_independent_external_validation",
+  "expression": "위험군 선별 보조 점수",
+  "model_files": [
+    "drawing_domain_fold_1.keras",
+    "drawing_domain_fold_2.keras",
+    "drawing_domain_fold_3.keras",
+    "drawing_domain_fold_4.keras",
+    "drawing_domain_fold_5.keras"
+  ],
+  "preprocessing": "grayscale 3-channel; no guide alignment",
+  "training_augmentation": "geometry, brightness, line width, blur, resolution, JPEG",
+  "validation": "development-only subject-grouped 5-fold OOF; holdout not reused",
+  "subjects": 65,
+  "images": 376,
+  "fold_auc": [
+    1.0,
+    0.8888888888888888,
+    0.9555555555555556,
+    0.7222222222222222,
+    0.7142857142857143
+  ],
+  "fold_auc_std": 0.1180747550080846,
+  "overall": {
+    "auc": 0.8252032520325203,
+    "sensitivity": 0.8292682926829268,
+    "specificity": 0.7916666666666666,
+    "f1": 0.85,
+    "threshold": 0.3898262083530426,
+    "confusion_matrix": [
+      [
+        19,
+        5
+      ],
+      [
+        7,
+        34
+      ]
+    ]
+  },
+  "by_source": {
+    "HandPD_trace_only": {
+      "auc": 0.8054187192118226,
+      "sensitivity": 0.9310344827586207,
+      "specificity": 0.6428571428571429,
+      "f1": 0.8852459016393442,
+      "threshold": 0.3898262083530426,
+      "confusion_matrix": [
+        [
+          9,
+          5
+        ],
+        [
+          2,
+          27
+        ]
+      ]
+    },
+    "Legacy": {
+      "auc": 0.8500000000000001,
+      "sensitivity": 0.5833333333333334,
+      "specificity": 1.0,
+      "f1": 0.7368421052631579,
+      "threshold": 0.3898262083530426,
+      "confusion_matrix": [
+        [
+          10,
+          0
+        ],
+        [
+          5,
+          7
+        ]
+      ]
+    }
+  }
+}

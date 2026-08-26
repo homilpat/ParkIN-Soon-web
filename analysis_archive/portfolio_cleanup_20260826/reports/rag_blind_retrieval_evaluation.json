@@ -1,0 +1,369 @@
+{
+  "dataset_role": "locked_blind_test",
+  "independent_test": true,
+  "dataset_sha256": "49b6cc9feb24f40599a879d8f27b99bcd4d6ac1ab9f7fc4546cb0862e33cce61",
+  "summary": {
+    "cases": 15,
+    "source_recall_at_3": 1.0,
+    "source_page_recall_at_3": 0.4
+  },
+  "results": [
+    {
+      "id": "blind_olfactory_followup_location",
+      "source_hit": true,
+      "source_page_hit": false,
+      "retrieved": [
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "body"
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 6,
+          "page_end": 6,
+          "evidence_type": "numeric"
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 2,
+          "page_end": 2,
+          "evidence_type": "body"
+        }
+      ]
+    },
+    {
+      "id": "blind_olfactory_score_variation",
+      "source_hit": true,
+      "source_page_hit": false,
+      "retrieved": [
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "numeric"
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "numeric"
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 5,
+          "page_end": 5,
+          "evidence_type": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "blind_olfactory_sex_difference",
+      "source_hit": true,
+      "source_page_hit": false,
+      "retrieved": [
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 3,
+          "page_end": 3,
+          "evidence_type": "body"
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 2,
+          "page_end": 2,
+          "evidence_type": "body"
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "blind_smell_external_rankings",
+      "source_hit": true,
+      "source_page_hit": false,
+      "retrieved": [
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 16,
+          "page_end": 16,
+          "evidence_type": "body"
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 3,
+          "page_end": 3,
+          "evidence_type": "body"
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 2,
+          "page_end": 2,
+          "evidence_type": "body"
+        }
+      ]
+    },
+    {
+      "id": "blind_smell_other_parkinsonism",
+      "source_hit": true,
+      "source_page_hit": false,
+      "retrieved": [
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 2,
+          "page_end": 2,
+          "evidence_type": "body"
+        },
+        {
+          "source": "후각머신러닝과 파킨슨.pdf",
+          "page": 6,
+          "page_end": 6,
+          "evidence_type": "body"
+        },
+        {
+          "source": "후각과 파킨슨 종단연구(10년).pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "blind_constipation_heterogeneity_sources",
+      "source_hit": true,
+      "source_page_hit": true,
+      "retrieved": [
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 8,
+          "page_end": 8,
+          "evidence_type": "body"
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "numeric"
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 2,
+          "page_end": 2,
+          "evidence_type": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "blind_constipation_case_control_bias",
+      "source_hit": true,
+      "source_page_hit": false,
+      "retrieved": [
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 2,
+          "page_end": 2,
+          "evidence_type": "body"
+        },
+        {
+          "source": "변비와 파킨슨.pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "body"
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 2,
+          "page_end": 2,
+          "evidence_type": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "blind_dat_pet_advantages",
+      "source_hit": true,
+      "source_page_hit": true,
+      "retrieved": [
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 7,
+          "page_end": 7,
+          "evidence_type": "body"
+        },
+        {
+          "source": "전구기종합파킨슨증상.pdf",
+          "page": 5,
+          "page_end": 5,
+          "evidence_type": "body"
+        }
+      ]
+    },
+    {
+      "id": "blind_spiral_svm_limit",
+      "source_hit": true,
+      "source_page_hit": false,
+      "retrieved": [
+        {
+          "source": "나선형그리기와 파킨슨.pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "body"
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "body"
+        },
+        {
+          "source": "나선형그리기와 파킨슨.pdf",
+          "page": 2,
+          "page_end": 2,
+          "evidence_type": "body"
+        }
+      ]
+    },
+    {
+      "id": "blind_gradcam_training_setup",
+      "source_hit": true,
+      "source_page_hit": true,
+      "retrieved": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "body"
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 3,
+          "page_end": 3,
+          "evidence_type": "numeric"
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5,
+          "page_end": 5,
+          "evidence_type": "body"
+        }
+      ]
+    },
+    {
+      "id": "blind_gradcam_mechanism",
+      "source_hit": true,
+      "source_page_hit": true,
+      "retrieved": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 4,
+          "page_end": 4,
+          "evidence_type": "body"
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 4,
+          "page_end": 4,
+          "evidence_type": "body"
+        },
+        {
+          "source": "나선형그리기와 파킨슨.pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "body"
+        }
+      ]
+    },
+    {
+      "id": "blind_cnn_filter_progression",
+      "source_hit": true,
+      "source_page_hit": true,
+      "retrieved": [
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 5,
+          "page_end": 5,
+          "evidence_type": "body"
+        },
+        {
+          "source": "나선형그리기와 파킨슨.pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "body"
+        },
+        {
+          "source": "나선형 그리기그래드캠.pdf",
+          "page": 1,
+          "page_end": 1,
+          "evidence_type": "body"
+        }
+      ]
+    },
+    {
+      "id": "blind_older_material_readability",
+      "source_hit": true,
+      "source_page_hit": false,
+      "retrieved": [
+        {
+          "source": "노인친화적 설명.pdf",
+          "page": 11,
+          "page_end": 11,
+          "evidence_type": "body"
+        },
+        {
+          "source": "노인친화적 설명.pdf",
+          "page": 11,
+          "page_end": 11,
+          "evidence_type": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "blind_older_numeric_risk",
+      "source_hit": true,
+      "source_page_hit": false,
+      "retrieved": [
+        {
+          "source": "노인친화적 설명.pdf",
+          "page": 19,
+          "page_end": 19,
+          "evidence_type": "body"
+        },
+        {
+          "source": "노인친화적 설명.pdf",
+          "page": 8,
+          "page_end": 8,
+          "evidence_type": "numeric"
+        },
+        {
+          "source": "노인친화적 설명.pdf",
+          "page": 35,
+          "page_end": 35,
+          "evidence_type": "body"
+        }
+      ]
+    },
+    {
+      "id": "blind_plain_language",
+      "source_hit": true,
+      "source_page_hit": true,
+      "retrieved": [
+        {
+          "source": "노인친화적 설명.pdf",
+          "page": 34,
+          "page_end": 34,
+          "evidence_type": "body"
+        },
+        {
+          "source": "노인친화적 설명.pdf",
+          "page": 12,
+          "page_end": 12,
+          "evidence_type": "body"
+        }
+      ]
+    }
+  ]
+}

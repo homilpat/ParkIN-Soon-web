@@ -1,0 +1,137 @@
+[
+  {
+    "id": "v2_gradcam_scaling",
+    "question": "Grad-CAM 나선 연구에서 특징값 정규화 범위는 어떻게 설정했나요?",
+    "source": "나선형 그리기그래드캠.pdf",
+    "pages": [3],
+    "evidence": "Min-max scaling normalized feature values to a 0-1 range.",
+    "expected_claims": ["최솟값-최댓값 정규화를 사용했다", "값의 범위는 0에서 1이었다"],
+    "forbidden_claims": ["표준점수 정규화만 사용했다", "정규화만으로 임상 성능이 보장된다"]
+  },
+  {
+    "id": "v2_gradcam_imbalance",
+    "question": "Grad-CAM 나선 데이터의 클래스 불균형은 어떻게 처리했나요?",
+    "source": "나선형 그리기그래드캠.pdf",
+    "pages": [3],
+    "evidence": "Class imbalance was addressed by generating additional samples for minority classes.",
+    "expected_claims": ["소수 클래스의 추가 표본을 생성했다"],
+    "forbidden_claims": ["불균형을 처리하지 않았다", "외부 데이터를 새로 모집했다"]
+  },
+  {
+    "id": "v2_spiral_prior_knn_accuracy",
+    "question": "선행 필기 연구에서 KNN·AdaBoost·SVM을 적용했을 때 정확도는 얼마였나요?",
+    "source": "나선형그리기와 파킨슨.pdf",
+    "pages": [2],
+    "evidence": "Three classifiers KNN, AdaBoost ensemble and SVM demonstrated 81% classification accuracy.",
+    "expected_claims": ["KNN, AdaBoost, SVM을 사용했다", "분류 정확도는 81%였다"],
+    "forbidden_claims": ["현재 ParkIN Soon 모델의 정확도다", "외부 검증 정확도다"]
+  },
+  {
+    "id": "v2_spiral_entropy_svm",
+    "question": "엔트로피와 신호 에너지 특징을 사용한 나선 연구의 SVM 정확도는 얼마였나요?",
+    "source": "나선형그리기와 파킨슨.pdf",
+    "pages": [3],
+    "evidence": "Novel measures based on entropy, signal energy, and empirical mode decomposition classified with SVM provided 88% accuracy.",
+    "expected_claims": ["엔트로피와 신호 에너지 등의 특징을 사용했다", "SVM 정확도는 88%였다"],
+    "forbidden_claims": ["영상만 입력했다", "개인의 진단 확률이 88%다"]
+  },
+  {
+    "id": "v2_constipation_study_types",
+    "question": "변비 메타분석의 17개 연구는 연구 설계별로 어떻게 구성됐나요?",
+    "source": "변비와 파킨슨.pdf",
+    "pages": [3],
+    "evidence": "Seventeen studies, including 11 case-control and 6 cohort studies, were included.",
+    "expected_claims": ["환자-대조군 연구는 11개였다", "코호트 연구는 6개였다"],
+    "forbidden_claims": ["17개 모두 무작위시험이었다", "17개 모두 코호트 연구였다"]
+  },
+  {
+    "id": "v2_constipation_sensitivity_range",
+    "question": "변비 메타분석의 민감도 분석에서 전체 OR 범위는 어떻게 나왔나요?",
+    "source": "변비와 파킨슨.pdf",
+    "pages": [9],
+    "evidence": "Sensitivity analysis was stable, with overall ORs ranging from 2.23 (95% CI 1.84-2.70) to 2.46 (95% CI 2.07-2.92).",
+    "expected_claims": ["전체 OR 범위는 2.23에서 2.46이었다", "민감도 분석 결과는 비교적 안정적이었다"],
+    "forbidden_claims": ["민감도가 2.23이었다", "변비가 원인임을 입증했다"]
+  },
+  {
+    "id": "v2_prodromal_presymptomatic_loss",
+    "question": "운동 증상 기준을 충족하기 전에 도파민 세포와 시냅스 기능은 얼마나 감소할 수 있나요?",
+    "source": "전구기종합파킨슨증상.pdf",
+    "pages": [2],
+    "evidence": "Pathological studies estimate 40-60% loss of dopaminergic cells and reduction of synaptic function by up to 80% before motor symptoms meeting current criteria appear.",
+    "expected_claims": ["도파민 세포 손실은 40~60%로 추정됐다", "시냅스 기능은 최대 80% 감소할 수 있다"],
+    "forbidden_claims": ["모든 개인에게 같은 감소율이 적용된다", "현재 사용자에게 직접 측정된 값이다"]
+  },
+  {
+    "id": "v2_prodromal_skin_biopsy",
+    "question": "전구기 논문에서 피부 생검 인산화 알파시누클레인의 민감도와 특이도는 얼마였나요?",
+    "source": "전구기종합파킨슨증상.pdf",
+    "pages": [5],
+    "evidence": "Phosphorylated alpha-synuclein in skin biopsy was sensitive (55-100%) and highly specific (>90%) for PD and prodromal PD.",
+    "expected_claims": ["민감도 범위는 55~100%였다", "특이도는 90% 초과였다"],
+    "forbidden_claims": ["민감도가 항상 100%다", "피부 생검만으로 진단이 확정된다"]
+  },
+  {
+    "id": "v2_olfactory_ledd_conversion",
+    "question": "10년 후각 연구에서 로피니롤은 레보도파 등가용량으로 어떻게 환산했나요?",
+    "source": "후각과 파킨슨 종단연구(10년).pdf",
+    "pages": [3],
+    "evidence": "The conversion used 5 mg ropinirole as equivalent in the stated LEDD conversion scheme.",
+    "expected_claims": ["로피니롤 5mg을 환산 기준으로 사용했다"],
+    "forbidden_claims": ["모든 약물이 5mg 기준이다", "사용자 복용량을 변경해야 한다"]
+  },
+  {
+    "id": "v2_olfactory_followup_explanation",
+    "question": "후각 종단 연구가 이전 연구와 다른 결과를 보인 이유로 무엇을 제시했나요?",
+    "source": "후각과 파킨슨 종단연구(10년).pdf",
+    "pages": [5],
+    "evidence": "A likely explanation was the relatively large sample and longer follow-up period of 10 years.",
+    "expected_claims": ["비교적 큰 표본을 이유로 들었다", "10년의 긴 추적 기간을 이유로 들었다"],
+    "forbidden_claims": ["원인이 확정됐다", "추적 기간이 1년이었다"]
+  },
+  {
+    "id": "v2_smell_cohort_composition",
+    "question": "후각 머신러닝 연구의 세 코호트에서 PD·DLB 대상자는 각각 몇 명이었나요?",
+    "source": "후각머신러닝과 파킨슨.pdf",
+    "pages": [7],
+    "evidence": "PD or DLB participants numbered 129 in DeNoPa, 70 in Ottawa Trial, and 102 in PROBE.",
+    "expected_claims": ["DeNoPa는 129명이었다", "Ottawa Trial은 70명, PROBE는 102명이었다"],
+    "forbidden_claims": ["세 코호트의 대상자가 중복됐다", "모두 건강 대조군이었다"]
+  },
+  {
+    "id": "v2_smell_no_overlap",
+    "question": "후각 머신러닝 연구의 세 연구 사이에 참가자 중복이 있었나요?",
+    "source": "후각머신러닝과 파킨슨.pdf",
+    "pages": [8],
+    "evidence": "No participant overlap existed between the three studies.",
+    "expected_claims": ["세 연구 사이에 참가자 중복은 없었다"],
+    "forbidden_claims": ["동일 참가자를 세 번 집계했다", "중복 여부를 확인하지 않았다"]
+  },
+  {
+    "id": "v2_smell_seven_names",
+    "question": "통합 간소화 후각 검사에 선택된 일곱 냄새는 무엇인가요?",
+    "source": "후각머신러닝과 파킨슨.pdf",
+    "pages": [16],
+    "evidence": "The seven scents were licorice, banana, clove, rose, mint, pineapple, and cinnamon.",
+    "expected_claims": ["감초·바나나·정향·장미·민트·파인애플·계피가 선택됐다"],
+    "forbidden_claims": ["아무 냄새나 일곱 개를 사용한다", "일곱 냄새만으로 진단이 확정된다"]
+  },
+  {
+    "id": "v2_smell_table_thresholds",
+    "question": "전체 후각 검사 표에서 Ottawa와 PROBE의 UPSIT 임계값은 각각 얼마였나요?",
+    "source": "후각머신러닝과 파킨슨.pdf",
+    "pages": [26],
+    "evidence": "Table 2 reported UPSIT thresholds of 28.5 for Ottawa Trial and 29.5 for PROBE.",
+    "expected_claims": ["Ottawa Trial 임계값은 28.5였다", "PROBE 임계값은 29.5였다"],
+    "forbidden_claims": ["두 임계값이 같았다", "모든 사람에게 적용되는 진단 기준이다"]
+  },
+  {
+    "id": "v2_older_health_literacy",
+    "question": "고령자의 문서와 수량 정보 이해 어려움은 각각 어느 정도로 보고됐나요?",
+    "source": "노인친화적 설명.pdf",
+    "pages": [11],
+    "evidence": "Among adults older than 60, 80% had difficulty using documents such as forms or charts and 68% had difficulty with quantitative tasks.",
+    "expected_claims": ["문서 사용 어려움은 80%였다", "수량 과제 어려움은 68%였다"],
+    "forbidden_claims": ["모든 고령자가 문서를 이해하지 못한다", "한국 고령자 전체의 확정 비율이다"]
+  }
+]

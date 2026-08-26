@@ -1,0 +1,31 @@
+{
+  "migrated_at": "2026-08-26T13:20:38+09:00",
+  "runtime": {
+    "python": "3.12.3",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3"
+  },
+  "scope": "serialization compatibility migration; model fitting and metrics not rerun",
+  "models": [
+    {
+      "model": "olfactory_bowel",
+      "source_sklearn_version": "1.5.0",
+      "original_sha256": "4F45CD475C16F6940211E9635D06EE35A206FF5D22F19C6C29B9E9D55D567C06",
+      "migrated_sha256": "0BBEFA141D342723CE41318867908364C979223342CD07AF98FEB5C372598A66",
+      "equivalence_samples": 6,
+      "max_abs_prediction_diff": 0.0,
+      "source_version_warning_count": 4,
+      "reload_version_warning_count": 0
+    },
+    {
+      "model": "kinematic",
+      "source_sklearn_version": "1.7.2",
+      "original_sha256": "87FE5348634DCC804CA00339756CC818A24F4F4681C88FAB69B1539F28535BB2",
+      "migrated_sha256": "65852787F79218DB6B02FEBB5DF76035D1BB0DA4B5D975FEE1C75BEBD81AFD68",
+      "equivalence_samples": 6,
+      "max_abs_prediction_diff": 1.1102230246251565e-16,
+      "source_version_warning_count": 304,
+      "reload_version_warning_count": 0
+    }
+  ]
+}

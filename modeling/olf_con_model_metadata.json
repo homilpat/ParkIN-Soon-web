@@ -1,0 +1,45 @@
+{
+  "model": "LogisticRegression",
+  "evaluation": "nested threshold CV (outer 5-fold, inner 4-fold)",
+  "threshold_rule": "maximum specificity with inner-CV sensitivity >= 0.80",
+  "auc": 0.8537593984962406,
+  "sensitivity": 0.793984962406015,
+  "specificity": 0.7686567164179104,
+  "threshold": 0.4488094796813394,
+  "deployment_oof_sensitivity": 0.8090225563909774,
+  "deployment_oof_specificity": 0.7611940298507462,
+  "nested_median_threshold": 0.49238940253275487,
+  "fold_thresholds": [
+    0.526135539557988,
+    0.4689214519169724,
+    0.49238940253275487,
+    0.47950217713628224,
+    0.5096371933698609
+  ],
+  "features": [
+    "BSIT_CHERRY",
+    "BSIT_DILL_PICKLE",
+    "BSIT_BANANA",
+    "BSIT_CHOCOLATE",
+    "BSIT_CINNAMON",
+    "BSIT_GASOLINE",
+    "BSIT_LEMON",
+    "BSIT_ONION",
+    "BSIT_PINEAPPLE",
+    "BSIT_ROSE",
+    "BSIT_SOAP",
+    "BSIT_SMOKE",
+    "SCOPA_AUT5",
+    "SCOPA_AUT6",
+    "SCOPA_AUT7"
+  ],
+  "training_pipeline_matches_deployment": true,
+  "serialization": {
+    "migrated_at": "2026-08-26T13:20:38+09:00",
+    "source_scikit_learn": "1.5.0",
+    "runtime_scikit_learn": "1.9.0",
+    "runtime_joblib": "1.5.3",
+    "prediction_equivalence_max_abs_diff": 0.0,
+    "report": "sklearn_model_migration_1_9.json"
+  }
+}

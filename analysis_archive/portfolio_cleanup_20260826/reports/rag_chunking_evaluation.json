@@ -1,0 +1,1111 @@
+{
+  "summary": {
+    "strategy": "page_section_sentences_v2",
+    "chunks": 804,
+    "mean_evidence_token_recall": 0.8777923099158549,
+    "numeric_preservation_rate": 1.0,
+    "single_page_chunk_rate": 1.0,
+    "multi_page_chunks": 0
+  },
+  "results": [
+    {
+      "id": "hyposmia_timing",
+      "source": "후각과 파킨슨 종단연구(10년).pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 0.6206896551724138,
+      "numeric_tokens_expected": [],
+      "numeric_tokens_preserved": [],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Abstract] When excluding patients with an MMSE score below 24, re ﬂecting cognitive de ﬁcits that might interfere with olfactory test performance, UPSIT score still decreased by almost 7 points over the follow-up period. Conclusions: Olfactory function in PD declines more rapidly with increasing disease duration than can be explained by aging or cognitive decline alone. As such, olfactory function appears to be a clinical marker of disease progression in PD that can be measured non-invasively and deserves consideration as part of multimodal phenotyping to monitor disease progression. Plain language summary: Up to nine out of ten patients with Parkinson ’s disease (PD) experience olfactory loss.",
+        "[Section: Abstract] Plain language summary: Up to nine out of ten patients with Parkinson ’s disease (PD) experience olfactory loss. We wanted to ﬁnd out if this loss further declines with disease progression. We tested the sense of smell in 90 PD patients at the start of study and again about ten years later using the University of Pennsylvania Smell Identi ﬁcation T est (UPSIT). Patients were around 58 years old at study entry and most were men. We also tested their cognitive functioning to make sure it did not affect the smell test results. We found that the sense of smell got worse in eight out of ten PD patients over the ten years of follow-up.",
+        "[Section: Abstract] Therefore, testing olfactory function could be a useful way to monitor the progression of PD in a non-invasive way. Keywords Parkinson disease, smell, disease progression, cognition Received: 1 June 2024; accepted: 19 October 2024 1Department of Neurology, Amsterdam UMC location Vrije Universiteit Amsterdam, Amsterdam, The Netherlands 2Amsterdam Neuroscience, Neurodegeneration, Amsterdam, The Netherlands 3Department of Medical Psychology, Amsterdam UMC location Vrije Universiteit Amsterdam, Amsterdam, The Netherlands 4Smell and T aste Center , Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA Dareia S Roos, De Boelelaan 1117, 1081 HV , Amsterdam, The Netherlands. creativecommons.org/licenses/by/4.0/) which permits any use, reproduction and distribution of the work without further permission provided the original work is attributed as speci ﬁed on the SAGE and Open Access page (https://us.sagepub.com/en-us/nam/open-access-at-sage)."
+      ]
+    },
+    {
+      "id": "constipation_association",
+      "source": "변비와 파킨슨.pdf",
+      "pages": [
+        9,
+        10
+      ],
+      "evidence_chunk_pages": [
+        [
+          10,
+          10
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "evidence_token_recall": 0.8181818181818182,
+      "numeric_tokens_expected": [
+        "2.36"
+      ],
+      "numeric_tokens_preserved": [
+        "2.36"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Conclusion] Constipation is a common nonmotor symptom that occurs in the early stages of PD and has been shown to increase the risk of PD onset. Our analysis indicated that patients with constipation had a 2.36-fold increased risk of PD when compared with those without constipation, which may last for decades. Considering the irreversible course of PD, early diagnosis and intervention are critical. Combining constipation with other nonmotor symptoms such as anosmia, rapid eye movement sleep behavior disorder, and other makers may aid in predicting the occurrence of PD.",
+        "[Section: Method] Given that only three included studies explored these issues, a precise conclusion could not be drawn (online suppl. Because constipation can occur decades before the emergence of motor symptoms of PD, analyzing this association may promote early diagnosis and treatment of PD. Constipation mainly manifests as reduced frequency of or difficulty in defecation, specifically due to weakening of colon peristalsis, slowing of propulsion speed, and prolonged presence of stool in the intestinal tract. [33] argued that PD may originate from the periph- Fig. Sensitivity analysis. Downloaded from http://karger.com/ene/article-pdf/86/1/34/3955243/000527513.pdf by guest on 19 May 2026",
+        "[Section: Method] Combining the disease code with medical history indicating drug treatment is a more accurate criterion for determining exposure to “constipation.” Two studies reported an association between sex and the risk of developing PD. Our analysis indicated that male sex was more strongly associated with risk in patients with constipation, although this must be verified in future studies (online suppl. Additionally, our results suggest that the frequency of bowel movements and the severity of constipation are positively correlated with the risk of developing PD. Given that only three included studies explored these issues, a precise conclusion could not be drawn (online suppl."
+      ]
+    },
+    {
+      "id": "prodromal_smell_test",
+      "source": "전구기종합파킨슨증상.pdf",
+      "pages": [
+        2
+      ],
+      "evidence_chunk_pages": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "evidence_token_recall": 0.8064516129032258,
+      "numeric_tokens_expected": [
+        "12"
+      ],
+      "numeric_tokens_preserved": [
+        "12"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Introduction] Hyposmia can be objectively quantiﬁed with standard tests such as 12-item Brief Smell Identiﬁcation Test (B-SIT) ( 4, 18). However the likelihood of developing PD is unclear. In a recent review and meta-analysis investigating the associat ion between hyposmia and PD, hyposmia was associated with a 3.84-fold risk of developing PD ( 16). In the Honolulu-Asia Aging Study, olfactory dysfunction was associated with an increased risk of PD; however, the association was signiﬁca nt only for the ﬁrst 4 years of follow-up because of the lack of systematic measurements of smell in epidemiological studie s (19, 20).",
+        "[Section: Introduction] The association of hyposmia TABLE 1 | Clinical non-motor markers of prodromal Parkinson’ s disease. Marker References Olfactory loss (15–21) Constipation (8, 19, 22–27) Rem sleep behavior disorder ( 28–34) Excessive daytime somnolence ( 13, 36, 37) Depression/anxiety (38–45) Global cognitive deﬁcit ( 46–49) Orthostatic hypotension ( 46, 50, 51) Erectile dysfunction (52–54) Urinary dysfunction (54, 55) with PD is widely accepted. About 80% of PD patients have impaired olfaction, which is in line with Braak‘s hypothesis of Lewy pathology in the olfactory bulb (Braak stage 1) ( 17). Hyposmia can be objectively quantiﬁed with standard tests such as 12-item Brief Smell Identiﬁcation Test (B-SIT) ( 4, 18).",
+        "[Evidence type: Numeric] Marker References Olfactory loss (15–21) Constipation (8, 19, 22–27) Rem sleep behavior disorder ( 28–34) Excessive daytime somnolence ( 13, 36, 37) Depression/anxiety (38–45) Global cognitive deﬁcit ( 46–49) Orthostatic hypotension ( 46, 50, 51) Erectile dysfunction (52–54) Urinary dysfunction (54, 55) with PD is widely accepted. About 80% of PD patients have impaired olfaction, which is in line with Braak‘s hypothesis of Lewy pathology in the olfactory bulb (Braak stage 1) ( 17). Hyposmia can be objectively quantiﬁed with standard tests such as 12-item Brief Smell Identiﬁcation Test (B-SIT) ( 4, 18)."
+      ]
+    },
+    {
+      "id": "spiral_motor_signal",
+      "source": "나선형그리기와 파킨슨.pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 0.9583333333333334,
+      "numeric_tokens_expected": [],
+      "numeric_tokens_preserved": [],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Introduction] Spiral drawing is a skilled and complex coordinated motor activity. Therefore, it is treated as sensitive motor assessment. Motor rating scale and its subscale Unified Parkinson’s disease rating scale (UPDRS-III) is the most widely used and accepted rating scale in Parkinson’s disease (PD). PD affects various functions of body such as speech, handwriting; walking, coordination movements and all these are considered part of motor functions. All quantitative indices of motor decline and non motor biomarkers have been proposed to check the degree of severity as PD is treated as motor disorder due to neurodegeneration process.",
+        "[Section: Abstract] Parkinson’s disease (PD) is the most common neurodegenerative disease affecting significantly motor functions of elderly persons. The diagnosis and monitoring of PD is costly and inconvenient process even today, in under developing parts of the world. The observable symptoms of PD at early stage include disorders in handwriting and repetitive tasks of spiral drawing. With advancement of IT it is easier to collect spiral drawing samples using digitized tablet. We proposed detailed analysis of Static and dynamic spirals drawn by PD patients. For this, in-air and on-surface kinematic variables are taken out from data files generated for 25 patients and 15 healthy controls, using mathematical models.",
+        "[Section: Introduction] All quantitative indices of motor decline and non motor biomarkers have been proposed to check the degree of severity as PD is treated as motor disorder due to neurodegeneration process. The diagnosis and monitoring of PD is costly and inconvenient process for two reasons: it is inconvenient for patient caretakers to take the patient to clinic and perform physical examination and diagnosis based on physical observation requires trained medical experts. A clinical invasive technique are available only at early stage, but incur risk with limited resources available in under developing parts of the world and if early diagnosis is done then only it is useful. Hence, from prior time, PD was assessed by traditional non-invasive"
+      ]
+    },
+    {
+      "id": "gradcam_scope",
+      "source": "나선형 그리기그래드캠.pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 0.71875,
+      "numeric_tokens_expected": [],
+      "numeric_tokens_preserved": [],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Front matter] By examining handwriting patterns, particularly spiral drawings, this method enables the identification of subtle motor abnormalities, providing an objective an d quantitative approach for early diagnosis and ongoing disease monitoring. This study presents a novel approach for spiral handwriting classification using a Convolutional Neural Network (CNN) integrated with attention mechanisms and Grad Scam model approach. The proposed grad scam model outperforms with state of art methods and achieved a highest accuracy of 89.5 percentage and provides a significant qualitative result. Keywords—Parkinson's Disease, Spiral Handwriting Analysis, Convolutional Neural Network, Early Diagnosis, Grad - CAM Attention Mechanism.",
+        "[Section: Front matter] Keywords—Parkinson's Disease, Spiral Handwriting Analysis, Convolutional Neural Network, Early Diagnosis, Grad - CAM Attention Mechanism. INTRODUCTION Millions of people worldwide suffer with Parkinson's disease (PD), a degenerative, chronic neurological condition. Parkinson's disease is distinguished by motor symptoms like slowness of movement, tremors, rigid muscles, and poor balance in addition to non -motor symptoms like depression and difficulty thinking. Parkinson's disease is difficult to diagnose and treat due to such complex symptoms. Improved patient care and early treatment rely on early and correct diagnosis. Nevertheless, with regard to personal and beyondcontrol clinical choices, conventional diagnosis prevails.",
+        "[Section: Limitation] Among them, handwriting analysis, or spiral drawing assessment, has gained increased attention since it is a non - invasive measure and can detect mild mot or dysfunction of PD [3]. Handwriting models of research, such as spiral drawing, use digitized samples to measure motor dysfunction quantitatively. They use signal processing techniques combined with sophisticated ML/DL techniques to identify useful featu res like drawing speed, pressure applied, and tremor pattern. It has been demonstrated that techniques like recurrent neural networks (RNNs) and convolutional neural networks (CNNs) can follow the evolution of the disease and differentiate PD patients from normalcy [4]."
+      ]
+    },
+    {
+      "id": "olfactory_prevalence",
+      "source": "후각과 파킨슨 종단연구(10년).pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 1.0,
+      "numeric_tokens_expected": [
+        "90"
+      ],
+      "numeric_tokens_preserved": [
+        "90"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Abstract] Background: Olfactory dysfunction is a prodromal sign of Parkinson ’s disease (PD) present in up to 90% of patients. However, it is unclear whether or not olfactory function worsens over the course of the disease. Objective: In this study we examined whether the rate of decline of olfactory function in PD patients exceeds the expected age-related decline. Methods: Olfactory function was tested in 90 PD patients at baseline (age at baseline 58.3 years, 68.9% males) and an average 10 years later using the 40-item University of Pennsylvania Smell Identi ﬁcation T est (UPSIT). T o screen for concomitant cognitive de ﬁcits as a potential confounder, the Mini-Mental State Examination (MMSE) was used.",
+        "[Evidence type: Numeric] Background: Olfactory dysfunction is a prodromal sign of Parkinson ’s disease (PD) present in up to 90% of patients. However, it is unclear whether or not olfactory function worsens over the course of the disease.",
+        "[Section: Abstract] When excluding patients with an MMSE score below 24, re ﬂecting cognitive de ﬁcits that might interfere with olfactory test performance, UPSIT score still decreased by almost 7 points over the follow-up period. Conclusions: Olfactory function in PD declines more rapidly with increasing disease duration than can be explained by aging or cognitive decline alone. As such, olfactory function appears to be a clinical marker of disease progression in PD that can be measured non-invasively and deserves consideration as part of multimodal phenotyping to monitor disease progression. Plain language summary: Up to nine out of ten patients with Parkinson ’s disease (PD) experience olfactory loss."
+      ]
+    },
+    {
+      "id": "olfactory_longitudinal_decline",
+      "source": "후각과 파킨슨 종단연구(10년).pdf",
+      "pages": [
+        4
+      ],
+      "evidence_chunk_pages": [
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "evidence_token_recall": 1.0,
+      "numeric_tokens_expected": [
+        "16.0",
+        "22.2",
+        "6.2",
+        "81"
+      ],
+      "numeric_tokens_preserved": [
+        "16.0",
+        "22.2",
+        "6.2",
+        "81"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Results] Olfactory function Olfactory function declined by an average of 6.2 points from a mean of 22.2 points at baseline to 16.0 points at follow-up (Table 3). More than 81% (n = 73) of patients had a decrease in their UPSIT score, in 5.6% (n = 5) the score was unchanged, and in 13.3% (n = 12) it increased. Eleven patients showed improvement of one to four points, one single patient showed improvement of 8 points. A spaghetti plot shows the changes in UPSIT score for each individual participant (Figure 2). Baseline olfactory function was better in females compared to males; and declined more in females (Table 3).",
+        "[Evidence type: Numeric] Olfactory function Olfactory function declined by an average of 6.2 points from a mean of 22.2 points at baseline to 16.0 points at follow-up (Table 3). More than 81% (n = 73) of patients had a decrease in their UPSIT score, in 5.6% (n = 5) the score was unchanged, and in 13.3% (n = 12) it increased. Eleven patients showed improvement of one to four points, one single patient showed improvement of 8 points.",
+        "[Section: Results] Eight patients reported having chronic sinusitis. When excluding these patients, olfactory function still decreased by six points (Table 3). Cognitive function Two patients at baseline and three patients at follow-up refused to perform the MMSE. The mean score of the MMSE remained high at baseline and follow-up, and showed a statistically signi ﬁcant mean decline of 1.5 points (Table 3), but of minor clinical signi ﬁcance. At baseline, two patients had an MMSE score below 24. At follow-up, this had increased to nine patients. When excluding these 14 patients, the UPSIT score still decreased by 6.8 points over the follow-up period."
+      ]
+    },
+    {
+      "id": "olfactory_cognition_sensitivity",
+      "source": "후각과 파킨슨 종단연구(10년).pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 1.0,
+      "numeric_tokens_expected": [
+        "24",
+        "7"
+      ],
+      "numeric_tokens_preserved": [
+        "24",
+        "7"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Abstract] T o screen for concomitant cognitive de ﬁcits as a potential confounder, the Mini-Mental State Examination (MMSE) was used. Results: At baseline, the mean UPSIT score was 22 points. Over the average 10-year follow-up period olfactory function decreased in 81.1% of PD patients, even in the youngest patients in whom no age-related decline was expected. The mean decrease was six UPSIT points ( p < 0.001), which exceeds the expected age-related decline derived from a previous study. When excluding patients with an MMSE score below 24, re ﬂecting cognitive de ﬁcits that might interfere with olfactory test performance, UPSIT score still decreased by almost 7 points over the follow-up period.",
+        "[Section: Abstract] When excluding patients with an MMSE score below 24, re ﬂecting cognitive de ﬁcits that might interfere with olfactory test performance, UPSIT score still decreased by almost 7 points over the follow-up period. Conclusions: Olfactory function in PD declines more rapidly with increasing disease duration than can be explained by aging or cognitive decline alone. As such, olfactory function appears to be a clinical marker of disease progression in PD that can be measured non-invasively and deserves consideration as part of multimodal phenotyping to monitor disease progression. Plain language summary: Up to nine out of ten patients with Parkinson ’s disease (PD) experience olfactory loss.",
+        "[Evidence type: Numeric] Over the average 10-year follow-up period olfactory function decreased in 81.1% of PD patients, even in the youngest patients in whom no age-related decline was expected. The mean decrease was six UPSIT points ( p < 0.001), which exceeds the expected age-related decline derived from a previous study. When excluding patients with an MMSE score below 24, re ﬂecting cognitive de ﬁcits that might interfere with olfactory test performance, UPSIT score still decreased by almost 7 points over the follow-up period."
+      ]
+    },
+    {
+      "id": "olfactory_cross_sectional_limit",
+      "source": "후각과 파킨슨 종단연구(10년).pdf",
+      "pages": [
+        2
+      ],
+      "evidence_chunk_pages": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "evidence_token_recall": 0.6923076923076923,
+      "numeric_tokens_expected": [],
+      "numeric_tokens_preserved": [],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Introduction] A reduced sense of smell is one of the most frequent and earliest non-motor symptoms in Parkinson ’s disease (PD). While hyposmia can be detected ﬁve to ten years prior to the ﬁrst motor symptoms, 1,2 it is still unknown whether and, if so, to what extent olfactory function declines with disease progression. Most cross-sectional studies on olfactory function in PD patients, using either the University of Pennsylvania Smell Identiﬁcation Test (UPSIT) 3 or the Snif ﬁn’ Sticks smell screening test, 4 found no evidence for a time-dependent decline.5– 9 However, two studies reported a negative correlation between disease duration and UPSIT scores.",
+        "[Section: Introduction] Most cross-sectional studies on olfactory function in PD patients, using either the University of Pennsylvania Smell Identiﬁcation Test (UPSIT) 3 or the Snif ﬁn’ Sticks smell screening test, 4 found no evidence for a time-dependent decline.5– 9 However, two studies reported a negative correlation between disease duration and UPSIT scores. 10,11 One study reported a similar correlation between disease duration and scores on the Snif ﬁn’ Sticks odor discrimination, but not odor identi ﬁcation, test. 12 Recently, in a crosssectional study in 295 PD patients, we found hyposmia to be associated with various motor and non-motor symptoms, including cognitive deﬁcits, depression, anxiety, autonomic dysfunction, and sleep disturbances.",
+        "[Evidence type: Numeric] While hyposmia can be detected ﬁve to ten years prior to the ﬁrst motor symptoms, 1,2 it is still unknown whether and, if so, to what extent olfactory function declines with disease progression. Most cross-sectional studies on olfactory function in PD patients, using either the University of Pennsylvania Smell Identiﬁcation Test (UPSIT) 3 or the Snif ﬁn’ Sticks smell screening test, 4 found no evidence for a time-dependent decline.5– 9 However, two studies reported a negative correlation between disease duration and UPSIT scores."
+      ]
+    },
+    {
+      "id": "smell_seven_scents",
+      "source": "후각머신러닝과 파킨슨.pdf",
+      "pages": [
+        3
+      ],
+      "evidence_chunk_pages": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "evidence_token_recall": 1.0,
+      "numeric_tokens_expected": [
+        "16",
+        "40"
+      ],
+      "numeric_tokens_preserved": [
+        "16",
+        "40"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Results] (ii) SST-ID and UPSIT scents showed distinct discriminative 61 performances, with the top odorants (licorice, banana, clove, rose, mint, pineapple and cinnamon) 62 confirmed by external evidence. (iii) A subset of only seven scents demonstrated a similar 63 performance to that of the complete 16-scent SST-ID and 40-scent UPSIT kits, in both discovery 64 and validation steps. Seven scents distinguished PD/DLB subjects from healthy controls with an 65 AUC of 0.87 (95%CI 0.85-0.9) and PD/DLB from PSP/MSA patients with an AUC of 0.73 66 (95%CI 0.65-0.8) within the three cohorts (n=650). (iv) Increased age was associated with a 67 decline in olfaction.",
+        "[Evidence type: Numeric] (iii) A subset of only seven scents demonstrated a similar 63 performance to that of the complete 16-scent SST-ID and 40-scent UPSIT kits, in both discovery 64 and validation steps. Seven scents distinguished PD/DLB subjects from healthy controls with an 65 AUC of 0.87 (95%CI 0.85-0.9) and PD/DLB from PSP/MSA patients with an AUC of 0.73 66 (95%CI 0.65-0.8) within the three cohorts (n=650). (iv) Increased age was associated with a 67 decline in olfaction.",
+        "[Section: Methods] 48 Methods: We used the Sniffin’ Sticks Identification Test (SST-ID) and the University of 49 Pennsylvania Smell Identification Test (UPSIT), together with data from three case-control 50 studies, to compare olfaction in 301 patients with PD or dementia with Lewy bodies (DLB) to 36 51 subjects with multiple system atrophy (MSA), 32 individuals with progressive supranuclear 52 palsy (PSP) and 281 neurologically healthy controls. Individual SST-ID and UPSIT scents were 53 ranked by area under the receiver operating characteristic curve (AUC) values for group 54 classification, with 10-fold cross-validation. Additional rankings were generated by leveraging 55"
+      ]
+    },
+    {
+      "id": "smell_seven_auc",
+      "source": "후각머신러닝과 파킨슨.pdf",
+      "pages": [
+        3
+      ],
+      "evidence_chunk_pages": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "evidence_token_recall": 1.0,
+      "numeric_tokens_expected": [
+        "0.65",
+        "0.73",
+        "0.8",
+        "0.85",
+        "0.87",
+        "0.9",
+        "95"
+      ],
+      "numeric_tokens_preserved": [
+        "0.65",
+        "0.73",
+        "0.8",
+        "0.85",
+        "0.87",
+        "0.9",
+        "95"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Results] (ii) SST-ID and UPSIT scents showed distinct discriminative 61 performances, with the top odorants (licorice, banana, clove, rose, mint, pineapple and cinnamon) 62 confirmed by external evidence. (iii) A subset of only seven scents demonstrated a similar 63 performance to that of the complete 16-scent SST-ID and 40-scent UPSIT kits, in both discovery 64 and validation steps. Seven scents distinguished PD/DLB subjects from healthy controls with an 65 AUC of 0.87 (95%CI 0.85-0.9) and PD/DLB from PSP/MSA patients with an AUC of 0.73 66 (95%CI 0.65-0.8) within the three cohorts (n=650). (iv) Increased age was associated with a 67 decline in olfaction.",
+        "[Evidence type: Numeric] (iii) A subset of only seven scents demonstrated a similar 63 performance to that of the complete 16-scent SST-ID and 40-scent UPSIT kits, in both discovery 64 and validation steps. Seven scents distinguished PD/DLB subjects from healthy controls with an 65 AUC of 0.87 (95%CI 0.85-0.9) and PD/DLB from PSP/MSA patients with an AUC of 0.73 66 (95%CI 0.65-0.8) within the three cohorts (n=650). (iv) Increased age was associated with a 67 decline in olfaction.",
+        "[Section: Methods] 48 Methods: We used the Sniffin’ Sticks Identification Test (SST-ID) and the University of 49 Pennsylvania Smell Identification Test (UPSIT), together with data from three case-control 50 studies, to compare olfaction in 301 patients with PD or dementia with Lewy bodies (DLB) to 36 51 subjects with multiple system atrophy (MSA), 32 individuals with progressive supranuclear 52 palsy (PSP) and 281 neurologically healthy controls. Individual SST-ID and UPSIT scents were 53 ranked by area under the receiver operating characteristic curve (AUC) values for group 54 classification, with 10-fold cross-validation. Additional rankings were generated by leveraging 55"
+      ]
+    },
+    {
+      "id": "smell_prevalence_range",
+      "source": "후각머신러닝과 파킨슨.pdf",
+      "pages": [
+        6
+      ],
+      "evidence_chunk_pages": [
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "evidence_token_recall": 0.9166666666666666,
+      "numeric_tokens_expected": [
+        "45",
+        "90"
+      ],
+      "numeric_tokens_preserved": [
+        "45",
+        "90"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Results] Li et al., Simplified Olfaction Testing to Identify Patients with Parkinson’s INTRODUCTION 110 Hyposmia is a common non-motor sign of Parkinson disease (PD) and dementia. The reported 111 prevalence of olfaction loss in PD ranges from 45% to >90% based on populations selected, 112 testing methods, and threshold criteria. [1] Chronic hyposmia is also described as predictive, with 113 reduced olfaction preceding PD diagnosis by 4-20 years. [1]-[3] Olfactory testing may also help in 114 the differentiation of parkinsonian syndromes.",
+        "[Evidence type: Numeric] Li et al., Simplified Olfaction Testing to Identify Patients with Parkinson’s INTRODUCTION 110 Hyposmia is a common non-motor sign of Parkinson disease (PD) and dementia. The reported 111 prevalence of olfaction loss in PD ranges from 45% to >90% based on populations selected, 112 testing methods, and threshold criteria. [1] Chronic hyposmia is also described as predictive, with 113 reduced olfaction preceding PD diagnosis by 4-20 years.",
+        "[Evidence type: Numeric] The reported 111 prevalence of olfaction loss in PD ranges from 45% to >90% based on populations selected, 112 testing methods, and threshold criteria. [1] Chronic hyposmia is also described as predictive, with 113 reduced olfaction preceding PD diagnosis by 4-20 years. [1]-[3] Olfactory testing may also help in 114 the differentiation of parkinsonian syndromes."
+      ]
+    },
+    {
+      "id": "smell_cohort_size",
+      "source": "후각머신러닝과 파킨슨.pdf",
+      "pages": [
+        3
+      ],
+      "evidence_chunk_pages": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "evidence_token_recall": 0.6875,
+      "numeric_tokens_expected": [
+        "650"
+      ],
+      "numeric_tokens_preserved": [
+        "650"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Results] (ii) SST-ID and UPSIT scents showed distinct discriminative 61 performances, with the top odorants (licorice, banana, clove, rose, mint, pineapple and cinnamon) 62 confirmed by external evidence. (iii) A subset of only seven scents demonstrated a similar 63 performance to that of the complete 16-scent SST-ID and 40-scent UPSIT kits, in both discovery 64 and validation steps. Seven scents distinguished PD/DLB subjects from healthy controls with an 65 AUC of 0.87 (95%CI 0.85-0.9) and PD/DLB from PSP/MSA patients with an AUC of 0.73 66 (95%CI 0.65-0.8) within the three cohorts (n=650). (iv) Increased age was associated with a 67 decline in olfaction.",
+        "[Evidence type: Numeric] (iii) A subset of only seven scents demonstrated a similar 63 performance to that of the complete 16-scent SST-ID and 40-scent UPSIT kits, in both discovery 64 and validation steps. Seven scents distinguished PD/DLB subjects from healthy controls with an 65 AUC of 0.87 (95%CI 0.85-0.9) and PD/DLB from PSP/MSA patients with an AUC of 0.73 66 (95%CI 0.65-0.8) within the three cohorts (n=650). (iv) Increased age was associated with a 67 decline in olfaction.",
+        "[Section: Methods] 48 Methods: We used the Sniffin’ Sticks Identification Test (SST-ID) and the University of 49 Pennsylvania Smell Identification Test (UPSIT), together with data from three case-control 50 studies, to compare olfaction in 301 patients with PD or dementia with Lewy bodies (DLB) to 36 51 subjects with multiple system atrophy (MSA), 32 individuals with progressive supranuclear 52 palsy (PSP) and 281 neurologically healthy controls. Individual SST-ID and UPSIT scents were 53 ranked by area under the receiver operating characteristic curve (AUC) values for group 54 classification, with 10-fold cross-validation. Additional rankings were generated by leveraging 55"
+      ]
+    },
+    {
+      "id": "smell_hyposmia_thresholds",
+      "source": "후각머신러닝과 파킨슨.pdf",
+      "pages": [
+        9
+      ],
+      "evidence_chunk_pages": [
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "evidence_token_recall": 0.8,
+      "numeric_tokens_expected": [
+        "10",
+        "15"
+      ],
+      "numeric_tokens_preserved": [
+        "10",
+        "15"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Results] The 192 reported p-values represented the significance from corresponding Fisher's exact test or Kruskal-193 Wallis rank sum test, with false discovery rate correction for multiple testing; p-values smaller 194 than 0.05 were considered significant. 195 Comparing different smell tests: Score distributions of corresponding smell tests in each subject 196 group were illustrated using Cummings estimation plots. [31] The raw UPSIT and SST-ID scores 197 were also normalized into percentiles based on age and sex, and hyposmia was defined by SST-198 ID percentile ≤ 10% [32] or UPSIT percentile ≤ 15%.",
+        "[Section: Results] [31] The raw UPSIT and SST-ID scores 197 were also normalized into percentiles based on age and sex, and hyposmia was defined by SST-198 ID percentile ≤ 10% [32] or UPSIT percentile ≤ 15%. [10] Discrimination performances of these 199 subtests were compared using area under the receiver operating characteristic (ROC) curve 200 (AUC) values with bootstrap estimated 95% confidence interval (CI), [33] in order to distinguish 201 diagnostic groups.",
+        "[Evidence type: Numeric] 195 Comparing different smell tests: Score distributions of corresponding smell tests in each subject 196 group were illustrated using Cummings estimation plots. [31] The raw UPSIT and SST-ID scores 197 were also normalized into percentiles based on age and sex, and hyposmia was defined by SST-198 ID percentile ≤ 10% [32] or UPSIT percentile ≤ 15%."
+      ]
+    },
+    {
+      "id": "smell_full_test_auc",
+      "source": "후각머신러닝과 파킨슨.pdf",
+      "pages": [
+        11
+      ],
+      "evidence_chunk_pages": [
+        [
+          11,
+          11
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "evidence_token_recall": 0.875,
+      "numeric_tokens_expected": [
+        "0.89",
+        "0.93"
+      ],
+      "numeric_tokens_preserved": [
+        "0.89",
+        "0.93"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Results] Li et al., Simplified Olfaction Testing to Identify Patients with Parkinson’s kits had comparable performance in distinguishing PD/DLB patients from HC subjects ( Figure 244 2(e), left) with AUC values in the three cohorts ranging between 0.89-0.93. Further, both tests 245 showed reduced performance when distinguishing PD/DLB patients from MSA/PSP patients 246 (Figure 2(e), right), but with a larger variation (0.69 to 0.92) across the three cohorts, likely due 247 to the small sample sizes of MSA/PSP groups in the Ottawa Trial and DeNoPa cohorts.",
+        "[Evidence type: Numeric] Li et al., Simplified Olfaction Testing to Identify Patients with Parkinson’s kits had comparable performance in distinguishing PD/DLB patients from HC subjects ( Figure 244 2(e), left) with AUC values in the three cohorts ranging between 0.89-0.93. Further, both tests 245 showed reduced performance when distinguishing PD/DLB patients from MSA/PSP patients 246 (Figure 2(e), right), but with a larger variation (0.69 to 0.92) across the three cohorts, likely due 247 to the small sample sizes of MSA/PSP groups in the Ottawa Trial and DeNoPa cohorts.",
+        "[Section: Results] Further, both tests 245 showed reduced performance when distinguishing PD/DLB patients from MSA/PSP patients 246 (Figure 2(e), right), but with a larger variation (0.69 to 0.92) across the three cohorts, likely due 247 to the small sample sizes of MSA/PSP groups in the Ottawa Trial and DeNoPa cohorts. When 248 compared to the other two SST subtests, SST-ID was found to be the most discriminative one in 249 distinguishing PD/DLB from both HC and from MSA/PSP ( Supplemental Figure 1 ), as 250 expected.[13] For cohort-specific thresholds and their corresponding sensitivity and specificity, 251 see Table 2."
+      ]
+    },
+    {
+      "id": "constipation_meta_sample",
+      "source": "변비와 파킨슨.pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 0.95,
+      "numeric_tokens_expected": [
+        "024",
+        "1",
+        "193",
+        "3",
+        "362",
+        "387",
+        "636",
+        "831"
+      ],
+      "numeric_tokens_preserved": [
+        "024",
+        "1",
+        "193",
+        "3",
+        "362",
+        "387",
+        "636",
+        "831"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Abstract] Associations were summarized as odds ratios (ORs) using a random-effects model. Subgroup, meta-regression, and sensitivity analyses were performed. Results: Seventeen studies comprising 3,024,193 participants (case-control = 1,636,831; cohort = 1,387,362) were eligible for inclusion. The pooled OR for the association between constipation and PD was 2.36 (95% confidence interval: 1.93–2.88), although strong heterogeneity was observed (I 2 = 90%, p < 0.01). Subgroup and meta-regression analyses indicated that study design and disease duration were the major sources of heterogeneity. A sensitivity analysis confirmed the stability of the outcomes.",
+        "[Evidence type: Numeric] Results: Seventeen studies comprising 3,024,193 participants (case-control = 1,636,831; cohort = 1,387,362) were eligible for inclusion. The pooled OR for the association between constipation and PD was 2.36 (95% confidence interval: 1.93–2.88), although strong heterogeneity was observed (I 2 = 90%, p < 0.01). Subgroup and meta-regression analyses indicated that study design and disease duration were the major sources of heterogeneity.",
+        "[Section: Abstract] Methods: The study was conducted in accordance with the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) and Meta-analyses of Observational Studies in Epidemiology (MOOSE) guidelines. We searched the Medline, Embase, Scopus, SI- NOMED, and Cochrane databases as well as specific journals from inception to September 2021 for observational studies that evaluated the association between constipation and the risk of PD. The Newcastle-Ottawa Scale was used to evaluate the methodological quality of the included studies. Associations were summarized as odds ratios (ORs) using a random-effects model. Subgroup, meta-regression, and sensitivity analyses were performed."
+      ]
+    },
+    {
+      "id": "constipation_pooled_or",
+      "source": "변비와 파킨슨.pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 0.9130434782608695,
+      "numeric_tokens_expected": [
+        "0.01",
+        "1.93",
+        "2",
+        "2.36",
+        "2.88",
+        "90",
+        "95"
+      ],
+      "numeric_tokens_preserved": [
+        "0.01",
+        "1.93",
+        "2",
+        "2.36",
+        "2.88",
+        "90",
+        "95"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Abstract] Associations were summarized as odds ratios (ORs) using a random-effects model. Subgroup, meta-regression, and sensitivity analyses were performed. Results: Seventeen studies comprising 3,024,193 participants (case-control = 1,636,831; cohort = 1,387,362) were eligible for inclusion. The pooled OR for the association between constipation and PD was 2.36 (95% confidence interval: 1.93–2.88), although strong heterogeneity was observed (I 2 = 90%, p < 0.01). Subgroup and meta-regression analyses indicated that study design and disease duration were the major sources of heterogeneity. A sensitivity analysis confirmed the stability of the outcomes.",
+        "[Evidence type: Numeric] Results: Seventeen studies comprising 3,024,193 participants (case-control = 1,636,831; cohort = 1,387,362) were eligible for inclusion. The pooled OR for the association between constipation and PD was 2.36 (95% confidence interval: 1.93–2.88), although strong heterogeneity was observed (I 2 = 90%, p < 0.01). Subgroup and meta-regression analyses indicated that study design and disease duration were the major sources of heterogeneity.",
+        "[Section: Abstract] A sensitivity analysis confirmed the stability of the outcomes. In addition, the prevalence of among those with prodromal PD was 20%, whereas it was only 11% in the control group (p < 0.01). Moreover, there were no significant agebased differences in constipation between the prodromal stage of PD patients and the controls (p > 0.05). Conclusion: Constipation has a relatively high incidence in the prodromal phase of PD and is associated with an increased risk of developing PD. © 2022 The Author(s)."
+      ]
+    },
+    {
+      "id": "constipation_prodromal_prevalence",
+      "source": "변비와 파킨슨.pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 0.9,
+      "numeric_tokens_expected": [
+        "0.01",
+        "11",
+        "20"
+      ],
+      "numeric_tokens_preserved": [
+        "0.01",
+        "11",
+        "20"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Abstract] A sensitivity analysis confirmed the stability of the outcomes. In addition, the prevalence of among those with prodromal PD was 20%, whereas it was only 11% in the control group (p < 0.01). Moreover, there were no significant agebased differences in constipation between the prodromal stage of PD patients and the controls (p > 0.05). Conclusion: Constipation has a relatively high incidence in the prodromal phase of PD and is associated with an increased risk of developing PD. © 2022 The Author(s).",
+        "[Evidence type: Numeric] A sensitivity analysis confirmed the stability of the outcomes. In addition, the prevalence of among those with prodromal PD was 20%, whereas it was only 11% in the control group (p < 0.01). Moreover, there were no significant agebased differences in constipation between the prodromal stage of PD patients and the controls (p > 0.05).",
+        "[Evidence type: Numeric] In addition, the prevalence of among those with prodromal PD was 20%, whereas it was only 11% in the control group (p < 0.01). Moreover, there were no significant agebased differences in constipation between the prodromal stage of PD patients and the controls (p > 0.05). Conclusion: Constipation has a relatively high incidence in the prodromal phase of PD and is associated with an increased risk of developing PD."
+      ]
+    },
+    {
+      "id": "constipation_prior_meta",
+      "source": "변비와 파킨슨.pdf",
+      "pages": [
+        2
+      ],
+      "evidence_chunk_pages": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "evidence_token_recall": 1.0,
+      "numeric_tokens_expected": [
+        "2.09",
+        "2.27",
+        "2.46",
+        "2016",
+        "95"
+      ],
+      "numeric_tokens_preserved": [
+        "2.09",
+        "2.27",
+        "2.46",
+        "2016",
+        "95"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Introduction] Several studies have reported a strong correlation between constipation and PD risk. A 2016 meta-analysis including nine studies [6] reported an odds ratio (OR) of 2.27 (95% CI: 2.09–2.46) for the correlation between constipation and PD. However, this result has been controversial given the small sample size. In recent years, several larger cohort and case-control studies have been published, including a total of 3,024,193 cases. Including these cases may increase the credibility of the previous conclusions. Therefore, we aimed to investigate the association between constipation and PD onset via a meta-analysis of studies published through September 2021.",
+        "[Evidence type: Numeric] Several studies have reported a strong correlation between constipation and PD risk. A 2016 meta-analysis including nine studies [6] reported an odds ratio (OR) of 2.27 (95% CI: 2.09–2.46) for the correlation between constipation and PD. However, this result has been controversial given the small sample size.",
+        "[Section: Introduction] Constipation and Parkinson’s Disease Eur Neurol 2023;86:34–44 DOI: 10.1159/000527513 with PD. These nonmotor symptoms are often observed many years prior to the emergence of motor symptoms and exert a negative impact on patient quality of life [3, 4]. A better understanding of these early symptoms may aid in the identification of those at greater risk for PD, which may in turn improve the likelihood of treatment at an early stage. The prevalence of constipation in patients with established PD ranges from 50 to 80% [5], affecting multiple aspects of daily living. Several studies have reported a strong correlation between constipation and PD risk."
+      ]
+    },
+    {
+      "id": "prodromal_neuron_loss",
+      "source": "전구기종합파킨슨증상.pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 0.8823529411764706,
+      "numeric_tokens_expected": [
+        "50",
+        "60"
+      ],
+      "numeric_tokens_preserved": [
+        "50",
+        "60"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Front matter] Misdiagnosis is common, due to overlap of symptoms with othe r neurodegenerative disorders such as multiple system atrophy and progressive s upranuclear palsy, and only autopsy can deﬁnitively conﬁrm the disease. Motor deﬁc its generally appear when 50–60% of dopaminergic neurons in the substantia nigra are a lready lost, limiting the effectiveness of potential neuroprotective therapies. T o day, we consider PD to be not just a movement disorder, but rather a complex syndrome nonmotor symptoms (NMS) including disorders of sleep-wake cycle regulation, cogni tive impairment, disorders of mood and affect, autonomic dysfunction, sensory symptoms a nd pain.",
+        "[Evidence type: Numeric] Misdiagnosis is common, due to overlap of symptoms with othe r neurodegenerative disorders such as multiple system atrophy and progressive s upranuclear palsy, and only autopsy can deﬁnitively conﬁrm the disease. Motor deﬁc its generally appear when 50–60% of dopaminergic neurons in the substantia nigra are a lready lost, limiting the effectiveness of potential neuroprotective therapies. T o day, we consider PD to be not just a movement disorder, but rather a complex syndrome nonmotor symptoms (NMS) including disorders of sleep-wake cycle regulation, cogni tive impairment, disorders of mood and affect, autonomic dysfunction, sensory symptoms a nd pain.",
+        "[Section: Introduction] Parkinson’s disease (PD) is clinically deﬁned by the presenc e of cardinal motor symptoms, bradykinesia in combination with at least one of rest tremor or rigidity ( 1). The cardinal motor symptoms depend upon progressive degeneration of the dopam ine-containing neurons in the substantia nigra pars compacta (SNpc) ( 2). The histopathological"
+      ]
+    },
+    {
+      "id": "prodromal_motor_definition",
+      "source": "전구기종합파킨슨증상.pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 0.9444444444444444,
+      "numeric_tokens_expected": [],
+      "numeric_tokens_preserved": [],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Introduction] Parkinson’s disease (PD) is clinically deﬁned by the presenc e of cardinal motor symptoms, bradykinesia in combination with at least one of rest tremor or rigidity ( 1). The cardinal motor symptoms depend upon progressive degeneration of the dopam ine-containing neurons in the substantia nigra pars compacta (SNpc) ( 2). The histopathological",
+        "[Section: Front matter] Olavs Hospital, Trondheim, No rway, 2 Department of Neuromedicine and Movement Science (INB), Faculty of Medicine and Health Sciences, Norwegian Un iversity of Science and Technology (NTNU), Trondheim, Norway The diagnosis of Parkinson’ s disease (PD) relies on the clin ical effects of dopamine deﬁciency, including bradykinesia, rigidity and tremor, usually manifesting asymmetrically. Misdiagnosis is common, due to overlap of symptoms with othe r neurodegenerative disorders such as multiple system atrophy and progressive s upranuclear palsy, and only autopsy can deﬁnitively conﬁrm the disease.",
+        "[Section: Front matter] 11:395. doi: 10.3389/fneur.2020.00395 Clinical and Imaging Markers of Prodromal Parkinson’s Disease Eldbjørg Hustad 1,2*† and Jan O. Aasly 1,2† 1 Department of Neurology, St. Olavs Hospital, Trondheim, No rway, 2 Department of Neuromedicine and Movement Science (INB), Faculty of Medicine and Health Sciences, Norwegian Un iversity of Science and Technology (NTNU), Trondheim, Norway The diagnosis of Parkinson’ s disease (PD) relies on the clin ical effects of dopamine deﬁciency, including bradykinesia, rigidity and tremor, usually manifesting asymmetrically."
+      ]
+    },
+    {
+      "id": "prodromal_bowel_interval",
+      "source": "전구기종합파킨슨증상.pdf",
+      "pages": [
+        3
+      ],
+      "evidence_chunk_pages": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "evidence_token_recall": 0.9655172413793104,
+      "numeric_tokens_expected": [
+        "10",
+        "12",
+        "2.7"
+      ],
+      "numeric_tokens_preserved": [
+        "10",
+        "12",
+        "2.7"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Introduction] Hustad and Aasly Markers of Prodromal Parkinson’ s Disease men with fewer than 1 bowel movement per day had a 2.7- fold higher odds of developing PD compared to men with more frequent bowel movements In the Honolulu-Asia Aging Study cohort, the mean interval from bowel-movement abnormality to PD symptoms was 10 years (and it was 12 years to PD diagnosis) (19, 26). ( 27) found in their Health Professionals Follow-up Study and Nurse Health Study that infrequent bowe l movements were associated with a higher future risk of PD in the next 6 years.",
+        "[Evidence type: Numeric] Hustad and Aasly Markers of Prodromal Parkinson’ s Disease men with fewer than 1 bowel movement per day had a 2.7- fold higher odds of developing PD compared to men with more frequent bowel movements In the Honolulu-Asia Aging Study cohort, the mean interval from bowel-movement abnormality to PD symptoms was 10 years (and it was 12 years to PD diagnosis) (19, 26). ( 27) found in their Health Professionals Follow-up Study and Nurse Health Study that infrequent bowe l movements were associated with a higher future risk of PD in the next 6 years.",
+        "[Section: Introduction] Global Cognitive Deﬁcit Cognitive deﬁcits was associated with increased PD risk in t wo prospective studies investigating global cognition and cogni tive decline ( 46). ( 47) found in a population-based cohort study including 7,386 participants of the Rotterdam Study with median 8.3 years of follow-up, poor baseline cognitive functioning indicated the probable onset of parkinsonism and probable Parkinson disease ( 47). ( 48) analyzed data from 8,166 patients aged older than age 50 years with incident diagnosis of PD and 46,755 controls looking at likelihood rat ios, sensitivity, speciﬁcity, and positive and negative predictive values for individual symptoms and combinations of presentations including cognitive decline."
+      ]
+    },
+    {
+      "id": "prodromal_dysautonomia",
+      "source": "전구기종합파킨슨증상.pdf",
+      "pages": [
+        4
+      ],
+      "evidence_chunk_pages": [
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "evidence_token_recall": 1.0,
+      "numeric_tokens_expected": [
+        "20"
+      ],
+      "numeric_tokens_preserved": [
+        "20"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Introduction] Recently new levels of diagnostic certainty for neurogenic and symptomatic orthos tatic hypotension have been added to the criteria ( 46). Erectile Dysfunction Dysautonomia is common among all synucleinopathies and limited dysautonomia may predate the motor symptoms by up to 20 years ( 52). Although erectile dysfunction (ED) is an autonomic symptom only a few studies have documented the frequencies of ED in PD. In a large-scale cohort with 32,616 US men, Gao et al. ( 53) observed that erectile dysfunction was prevalent among PD patients and that ED antedates PD diagnosis by many years.",
+        "[Evidence type: Numeric] Recently new levels of diagnostic certainty for neurogenic and symptomatic orthos tatic hypotension have been added to the criteria ( 46). Erectile Dysfunction Dysautonomia is common among all synucleinopathies and limited dysautonomia may predate the motor symptoms by up to 20 years ( 52). Although erectile dysfunction (ED) is an autonomic symptom only a few studies have documented the frequencies of ED in PD.",
+        "[Section: Introduction] Among patients with idiopathic RBD, symptoms of urinary frequency were documented up to 7 years before conversion to PD, with an extrapolated prodromal interval of 13 years ( 54). The speciﬁcity of this marker is, however, relatively low. Motor Markers The UPDRS was developed as a rating scale within PD ( 56). According to MDS prodromal PD criteria, possible subthreshold parkinsonism on expert examination deﬁned as a UPDRS score >3 excluding action tremor or MDS-UPDRS score >6, excluding postural and action tremor, is a clinical motor marker for prodromal PD (8). UPDRS ﬁrst becomes abnormal 4.5 years before diagnosis."
+      ]
+    },
+    {
+      "id": "prodromal_rbd_dat",
+      "source": "전구기종합파킨슨증상.pdf",
+      "pages": [
+        6
+      ],
+      "evidence_chunk_pages": [
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "evidence_token_recall": 0.8260869565217391,
+      "numeric_tokens_expected": [
+        "20",
+        "40"
+      ],
+      "numeric_tokens_preserved": [
+        "20",
+        "40"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Methods] Hustad and Aasly Markers of Prodromal Parkinson’ s Disease Cohort studies comparing RBD subjects to healthy controls have demonstrated that around 20–40% of RBD patients have abnormal DAT imaging ( 17). In one of the largest studies using DAT- SPECT , a prospective study of 43 iRBD patients, Iranzo et al. ( 12) found that decreased striatal DAT uptake (123I-FP-CIT binding) and substantia nigra hyperechogenicity might be useful markers to identify individuals at increased risk for developing synucleinopathies. After a follow up of 2.5 years, there was a pathologically reduced 123I-FP-CIT binding in 17 (40%) of 43 participants and substantia nigra hyperechogenicity in 14 (36%) of 39 participants.",
+        "[Evidence type: Numeric] Hustad and Aasly Markers of Prodromal Parkinson’ s Disease Cohort studies comparing RBD subjects to healthy controls have demonstrated that around 20–40% of RBD patients have abnormal DAT imaging ( 17). In one of the largest studies using DAT- SPECT , a prospective study of 43 iRBD patients, Iranzo et al.",
+        "[Section: Methods] ( 87) found a decline in striatal tracer uptake reﬂecting a progressive nigrostriatal dopaminergic dysfunction. The D AT deﬁcit seen in RBD is less severe than in established PD suggesting that dopaminergic imaging may have the potential to quantify progression through the prodromal phase ( 17, 88, 89). In a recent study by Bae et al. ( 90) they found that 3.0- T susceptibility-weighted MR imaging showed alterations of nigral hyperintensity in patients with iRBD that corresponded to DAT SPECT ﬁndings. However, future studies with a larger number of study subjects are recommended since 36.1% of the patients with iRBD showed discordance between the ﬁndings."
+      ]
+    },
+    {
+      "id": "spiral_dataset_accuracy",
+      "source": "나선형그리기와 파킨슨.pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 0.875,
+      "numeric_tokens_expected": [
+        "15",
+        "25",
+        "91"
+      ],
+      "numeric_tokens_preserved": [
+        "15",
+        "25",
+        "91"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Abstract] For this, in-air and on-surface kinematic variables are taken out from data files generated for 25 patients and 15 healthy controls, using mathematical models. Results demonstrated nearly 91% classification accuracy to separate PD patients from healthy controls by applying feature engineering and four machine learning (ML) classifiers Logistic Regression, C-Support Vector Classification (SVC), Knearest neighbor(KNN) classifier and ensemble model Random Forest Classifier(RFC). This paper confirms that digitized spiral drawings have major impact on classification of PD patients and healthy controls and hence can support future differential diagnosis of PD.",
+        "[Evidence type: Numeric] For this, in-air and on-surface kinematic variables are taken out from data files generated for 25 patients and 15 healthy controls, using mathematical models. Results demonstrated nearly 91% classification accuracy to separate PD patients from healthy controls by applying feature engineering and four machine learning (ML) classifiers Logistic Regression, C-Support Vector Classification (SVC), Knearest neighbor(KNN) classifier and ensemble model Random Forest Classifier(RFC). This paper confirms that digitized spiral drawings have major impact on classification of PD patients and healthy controls and hence can support future differential diagnosis of PD.",
+        "[Section: Abstract] Parkinson’s disease (PD) is the most common neurodegenerative disease affecting significantly motor functions of elderly persons. The diagnosis and monitoring of PD is costly and inconvenient process even today, in under developing parts of the world. The observable symptoms of PD at early stage include disorders in handwriting and repetitive tasks of spiral drawing. With advancement of IT it is easier to collect spiral drawing samples using digitized tablet. We proposed detailed analysis of Static and dynamic spirals drawn by PD patients. For this, in-air and on-surface kinematic variables are taken out from data files generated for 25 patients and 15 healthy controls, using mathematical models."
+      ]
+    },
+    {
+      "id": "spiral_kinematic_types",
+      "source": "나선형그리기와 파킨슨.pdf",
+      "pages": [
+        1
+      ],
+      "evidence_chunk_pages": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence_token_recall": 0.8666666666666667,
+      "numeric_tokens_expected": [],
+      "numeric_tokens_preserved": [],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Abstract] Parkinson’s disease (PD) is the most common neurodegenerative disease affecting significantly motor functions of elderly persons. The diagnosis and monitoring of PD is costly and inconvenient process even today, in under developing parts of the world. The observable symptoms of PD at early stage include disorders in handwriting and repetitive tasks of spiral drawing. With advancement of IT it is easier to collect spiral drawing samples using digitized tablet. We proposed detailed analysis of Static and dynamic spirals drawn by PD patients. For this, in-air and on-surface kinematic variables are taken out from data files generated for 25 patients and 15 healthy controls, using mathematical models.",
+        "[Section: Abstract] For this, in-air and on-surface kinematic variables are taken out from data files generated for 25 patients and 15 healthy controls, using mathematical models. Results demonstrated nearly 91% classification accuracy to separate PD patients from healthy controls by applying feature engineering and four machine learning (ML) classifiers Logistic Regression, C-Support Vector Classification (SVC), Knearest neighbor(KNN) classifier and ensemble model Random Forest Classifier(RFC). This paper confirms that digitized spiral drawings have major impact on classification of PD patients and healthy controls and hence can support future differential diagnosis of PD.",
+        "[Evidence type: Numeric] For this, in-air and on-surface kinematic variables are taken out from data files generated for 25 patients and 15 healthy controls, using mathematical models. Results demonstrated nearly 91% classification accuracy to separate PD patients from healthy controls by applying feature engineering and four machine learning (ML) classifiers Logistic Regression, C-Support Vector Classification (SVC), Knearest neighbor(KNN) classifier and ensemble model Random Forest Classifier(RFC). This paper confirms that digitized spiral drawings have major impact on classification of PD patients and healthy controls and hence can support future differential diagnosis of PD."
+      ]
+    },
+    {
+      "id": "gradcam_generalization_gap",
+      "source": "나선형 그리기그래드캠.pdf",
+      "pages": [
+        5
+      ],
+      "evidence_chunk_pages": [
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "evidence_token_recall": 0.9090909090909091,
+      "numeric_tokens_expected": [
+        "0.5",
+        "0.6",
+        "85",
+        "99"
+      ],
+      "numeric_tokens_preserved": [
+        "0.5",
+        "0.6",
+        "85",
+        "99"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Methods] Combined with convolutional, pooling, and fully connected layers, the architecture ensures accurate and efficient Parkinson’s diagnosis. 4 (a) and (B) Accuracy and loss plot of Grad CAM model (Model B) Fig.4. illustrates the GRAD CAM accuracy and loss plot based CNN model trained with spiral handwriting images for Parkinson's disease diagnosis. The model attained good learning performance. The model experienced successful feature learning but there was a generalization gap. The training accuracy was high with about 99% and a plateaued validation accuracy of around 85%. Therefore, validation loss flattened between 0.5 and 0.6 with visible oscillations, but training loss fell sharply to almost zero.",
+        "[Evidence type: Numeric] The model experienced successful feature learning but there was a generalization gap. The training accuracy was high with about 99% and a plateaued validation accuracy of around 85%. Therefore, validation loss flattened between 0.5 and 0.6 with visible oscillations, but training loss fell sharply to almost zero.",
+        "[Section: Methods] Therefore, validation loss flattened between 0.5 and 0.6 with visible oscillations, but training loss fell sharply to almost zero. This ga p between training and validation readings is evidence for the use of regularization techniques to improve generalis ability by showing that the model has a satisfactory fit to the training set but may overfit. 5 Confusion Matrix of Grad CAM model (Model B) Confusion matrix in Fig. 5. reflects GRAD SCAM model prediction accuracy used to classify spiral drawing input images used to diagnose Parkinson's disease. The ability of the model to discriminate between people with Parkinson's disease and those without is supported by the matrix."
+      ]
+    },
+    {
+      "id": "gradcam_sensitivity_specificity",
+      "source": "나선형 그리기그래드캠.pdf",
+      "pages": [
+        6
+      ],
+      "evidence_chunk_pages": [
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "evidence_token_recall": 0.8888888888888888,
+      "numeric_tokens_expected": [
+        "61.78",
+        "85",
+        "92.00",
+        "99"
+      ],
+      "numeric_tokens_preserved": [
+        "61.78",
+        "85",
+        "92.00",
+        "99"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Methods] 2025 4th International Conference on Sensors and Related Networks (SENNET) - Special Focus on Digital Healthcare The model demonstrated good training accuracy (99%) and consistent validation accuracy (85%) by properly distinguishing motor impairments. The CNN exhibited low specificity (61.78%) but high sensitivity (92.00%). The GRAD CAM-augmented model enhanced speci ficity (93.78%) while keeping sensitivity acceptable (84.00%) by lowering false positives and negatives. The findings illustrate the potential of this method for efficient PD screening, and more effort is required to optimize classification balance.",
+        "[Evidence type: Numeric] 2025 4th International Conference on Sensors and Related Networks (SENNET) - Special Focus on Digital Healthcare The model demonstrated good training accuracy (99%) and consistent validation accuracy (85%) by properly distinguishing motor impairments. The CNN exhibited low specificity (61.78%) but high sensitivity (92.00%).",
+        "[Evidence type: Numeric] 2025 4th International Conference on Sensors and Related Networks (SENNET) - Special Focus on Digital Healthcare The model demonstrated good training accuracy (99%) and consistent validation accuracy (85%) by properly distinguishing motor impairments. The CNN exhibited low specificity (61.78%) but high sensitivity (92.00%). The GRAD CAM-augmented model enhanced speci ficity (93.78%) while keeping sensitivity acceptable (84.00%) by lowering false positives and negatives."
+      ]
+    },
+    {
+      "id": "gradcam_augmentation",
+      "source": "나선형 그리기그래드캠.pdf",
+      "pages": [
+        4
+      ],
+      "evidence_chunk_pages": [
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "evidence_token_recall": 0.5714285714285714,
+      "numeric_tokens_expected": [
+        "0.1",
+        "0.85",
+        "1.15",
+        "10",
+        "64"
+      ],
+      "numeric_tokens_preserved": [
+        "0.1",
+        "0.85",
+        "1.15",
+        "10",
+        "64"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Methods] Such hyperparameter values shown in Table II together form a stable and effective training architecture so that the model is able to attain high performance as well as generalize well to new data. TRAINING HYPER PARAMETERS CONFIGURATION Parameter Value Description Resize 64x64 Final image dimensions Rotation Range ±10° Random rotation Translation ±0.1 Random translation range Scale Range 0.85- 1.15 Random scaling factor Shear Range (-5°, 5°) Random shearing Gaussian Blur σ=(0.1, 0.5) Random blur (30% probability) Kernel Size (Blur) 3 Size of Gaussian kernel Normalization mean= 0.5, std=0.5 Image normalization mean Table II outlines the spiral model’s augmentation process, enhancing dataset diversity for Parkinson’s diagnosis while preserving diagnostic features.",
+        "[Section: Methods] TRAINING HYPER PARAMETERS CONFIGURATION Parameter Value Description Resize 64x64 Final image dimensions Rotation Range ±10° Random rotation Translation ±0.1 Random translation range Scale Range 0.85- 1.15 Random scaling factor Shear Range (-5°, 5°) Random shearing Gaussian Blur σ=(0.1, 0.5) Random blur (30% probability) Kernel Size (Blur) 3 Size of Gaussian kernel Normalization mean= 0.5, std=0.5 Image normalization mean Table II outlines the spiral model’s augmentation process, enhancing dataset diversity for Parkinson’s diagnosis while preserving diagnostic features. Spiral images are standardized to 64×64 pixels, then undergo random rotations (±10°), translations (±10%), scalin g (0.85 –1.15×), and shearing (±5°) to simulate natural variations.",
+        "[Evidence type: Numeric] Such hyperparameter values shown in Table II together form a stable and effective training architecture so that the model is able to attain high performance as well as generalize well to new data. TRAINING HYPER PARAMETERS CONFIGURATION Parameter Value Description Resize 64x64 Final image dimensions Rotation Range ±10° Random rotation Translation ±0.1 Random translation range Scale Range 0.85- 1.15 Random scaling factor Shear Range (-5°, 5°) Random shearing Gaussian Blur σ=(0.1, 0.5) Random blur (30% probability) Kernel Size (Blur) 3 Size of Gaussian kernel Normalization mean= 0.5, std=0.5 Image normalization mean Table II outlines the spiral model’s augmentation process, enhancing dataset diversity for Parkinson’s diagnosis while preserving diagnostic features."
+      ]
+    },
+    {
+      "id": "spiral_prior_svm_metrics",
+      "source": "나선형 그리기그래드캠.pdf",
+      "pages": [
+        2
+      ],
+      "evidence_chunk_pages": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "evidence_token_recall": 0.9473684210526315,
+      "numeric_tokens_expected": [
+        "89",
+        "90",
+        "91"
+      ],
+      "numeric_tokens_preserved": [
+        "89",
+        "90",
+        "91"
+      ],
+      "all_numbers_preserved": true,
+      "evidence_chunk_texts": [
+        "[Section: Limitation] 2025 4th International Conference on Sensors and Related Networks (SENNET) - Special Focus on Digital Healthcare explored these approaches with notable success. Gil-Martín et al. extracted features such as speed and smoothness from spiral drawings and classified them using ML algorithms like Support Vector Machines (SVM) and Random Forests (RF) [5]. Their feature -based approach achieved over 90% accuracy, with SVM deliverin g 91% sensitivity and 89% specificity, underscoring the importance of optimal feature selection. Danna et al. adopted Convolutional Neural Networks (CNNs) for analysing spiral images, achieving 94.3% accuracy through automatic feature extraction.",
+        "[Evidence type: Numeric] extracted features such as speed and smoothness from spiral drawings and classified them using ML algorithms like Support Vector Machines (SVM) and Random Forests (RF) [5]. Their feature -based approach achieved over 90% accuracy, with SVM deliverin g 91% sensitivity and 89% specificity, underscoring the importance of optimal feature selection. Danna et al.",
+        "[Section: Limitation] The ensemble model attained 93% balanced accuracy, with 92% sensitivity and 94% specificity, and performed well on imbalanced datasets [9]. Valarmathi and Ranjan et al. applied deep autoencoders to learn unsupervised representations, achieving 92.8% accuracy and 90% sensitivity in early PD detection [10], [11]. Chen et al. used transfer learning with pre-trained Inception and MobileNet models, achieving 94% and 92% accuracy respectively, demonstrating the benefit of knowledge transfer in small datasets [12]. Khaskhoussy and Bennour et al. proposed graph-based feature representations combined with ML classifiers, which preserved spatial relationships and achieved 93.5% accuracy and 92.7% precision [13],[14]."
+      ]
+    }
+  ]
+}

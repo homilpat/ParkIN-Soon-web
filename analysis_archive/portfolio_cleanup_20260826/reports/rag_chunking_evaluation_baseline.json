@@ -1,0 +1,101 @@
+{
+  "summary": {
+    "strategy": "academic_sections_sentences_v1",
+    "chunks": 295,
+    "mean_evidence_token_recall": 0.7587203374119391,
+    "numeric_preservation_rate": 1.0,
+    "single_page_chunk_rate": 0.7694915254237288,
+    "multi_page_chunks": 68
+  },
+  "results": [
+    {
+      "id": "hyposmia_timing",
+      "source": "후각과 파킨슨 종단연구(10년).pdf",
+      "pages": [
+        1
+      ],
+      "best_chunk_pages": [
+        1,
+        2
+      ],
+      "evidence_token_recall": 0.9310344827586207,
+      "numeric_tokens_expected": [],
+      "numeric_tokens_preserved": [],
+      "all_numbers_preserved": true,
+      "best_chunk_text": "[Section: Introduction] Research article Journal of Parkinson ’s Disease Vol. 14(7): 1 – 7 © The Author(s) 2024 Article reuse guidelines: sagepub.com/journals-permissions DOI: 10.1177/1877718X241298708 journals.sagepub.com/home/pkn A reduced sense of smell is one of the most frequent and earliest non-motor symptoms in Parkinson ’s disease (PD). While hyposmia can be detected ﬁve to ten years prior to the ﬁrst motor symptoms, 1,2 it is still unknown whether and, if so, to what extent olfactory function declines with disease progression. Most cross-sectional studies on olfactory function in PD patients, using either the University of Pennsylvania Smell Identiﬁcation Test (UPSIT) 3 or the Snif ﬁn’ Sticks smell screening test, 4 found no evidence for a time-dependent decline.5– 9 However, two studies reported a negative correlation between disease duration and UPSIT scores."
+    },
+    {
+      "id": "constipation_association",
+      "source": "변비와 파킨슨.pdf",
+      "pages": [
+        9,
+        10
+      ],
+      "best_chunk_pages": [
+        10,
+        10
+      ],
+      "evidence_token_recall": 0.6666666666666666,
+      "numeric_tokens_expected": [
+        "2.36"
+      ],
+      "numeric_tokens_preserved": [
+        "2.36"
+      ],
+      "all_numbers_preserved": true,
+      "best_chunk_text": "[Section: Conclusion] Laxative use was defined as constipation or used to represent the severity of constipation in some studies, while other studies directly excluded cases involving laxative use. Although some studies also adjusted their analyses for laxative use, others did not. Furthermore, either the disease codes or clear descriptions of constipation were used as evidence of “exposure.” The variety of definitions for constipation in different countries and terri - tories may have affected our results. Constipation is a common nonmotor symptom that occurs in the early stages of PD and has been shown to increase the risk of PD onset. Our analysis indicated that patients with constipation had a 2.36-fold increased risk of PD when compared with those without constipation, which may last for decades. Considering the irreversible course of PD, early diagnosis and intervention are critical."
+    },
+    {
+      "id": "prodromal_smell_test",
+      "source": "전구기종합파킨슨증상.pdf",
+      "pages": [
+        2
+      ],
+      "best_chunk_pages": [
+        2,
+        2
+      ],
+      "evidence_token_recall": 0.9354838709677419,
+      "numeric_tokens_expected": [
+        "12"
+      ],
+      "numeric_tokens_preserved": [
+        "12"
+      ],
+      "all_numbers_preserved": true,
+      "best_chunk_text": "[Section: Introduction] CLINICAL MARKERS Non-motor Markers (T able 1) Olfactory Loss Hyposmia is one of the most common and best-characterized non-motor features and is often one of the earliest prodromal features to emerge ( 15, 16). The association of hyposmia TABLE 1 | Clinical non-motor markers of prodromal Parkinson’ s disease. Marker References Olfactory loss (15–21) Constipation (8, 19, 22–27) Rem sleep behavior disorder ( 28–34) Excessive daytime somnolence ( 13, 36, 37) Depression/anxiety (38–45) Global cognitive deﬁcit ( 46–49) Orthostatic hypotension ( 46, 50, 51) Erectile dysfunction (52–54) Urinary dysfunction (54, 55) with PD is widely accepted. About 80% of PD patients have impaired olfaction, which is in line with Braak‘s hypothesis of Lewy pathology in the olfactory bulb (Braak stage 1) ( 17). Hyposmia can be objectively quantiﬁed with standard tests such as 12-item Brief Smell Identiﬁcation Test (B-SIT) ( 4, 18). However the likelihood of developing PD is unclear."
+    },
+    {
+      "id": "spiral_motor_signal",
+      "source": "나선형그리기와 파킨슨.pdf",
+      "pages": [
+        1
+      ],
+      "best_chunk_pages": [
+        1,
+        1
+      ],
+      "evidence_token_recall": 0.6666666666666666,
+      "numeric_tokens_expected": [],
+      "numeric_tokens_preserved": [],
+      "all_numbers_preserved": true,
+      "best_chunk_text": "[Section: Introduction] With advancement of IT it is easier to collect spiral drawing samples using digitized tablet. We proposed detailed analysis of Static and dynamic spirals drawn by PD patients. For this, in-air and on-surface kinematic variables are taken out from data files generated for 25 patients and 15 healthy controls, using mathematical models. Results demonstrated nearly 91% classification accuracy to separate PD patients from healthy controls by applying feature engineering and four machine learning (ML) classifiers Logistic Regression, C-Support Vector Classification (SVC), Knearest neighbor(KNN) classifier and ensemble model Random Forest Classifier(RFC). This paper confirms that digitized spiral drawings have major impact on classification of PD patients and healthy controls and hence can support future differential diagnosis of PD. Spiral drawing is a skilled and complex coordinated motor activity. Therefore, it is treated as sensitive motor assessment."
+    },
+    {
+      "id": "gradcam_scope",
+      "source": "나선형 그리기그래드캠.pdf",
+      "pages": [
+        1
+      ],
+      "best_chunk_pages": [
+        1,
+        1
+      ],
+      "evidence_token_recall": 0.59375,
+      "numeric_tokens_expected": [],
+      "numeric_tokens_preserved": [],
+      "all_numbers_preserved": true,
+      "best_chunk_text": "[Section: Front matter] This approach provides a qualitative and quantitative analysis for early detection and pre & post medi cation effectiveness in identifying PD, particularly using handwriting spiral and wave drawing. By examining handwriting patterns, particularly spiral drawings, this method enables the identification of subtle motor abnormalities, providing an objective an d quantitative approach for early diagnosis and ongoing disease monitoring. This study presents a novel approach for spiral handwriting classification using a Convolutional Neural Network (CNN) integrated with attention mechanisms and Grad Scam model approach. The proposed grad scam model outperforms with state of art methods and achieved a highest accuracy of 89.5 percentage and provides a significant qualitative result. Keywords—Parkinson's Disease, Spiral Handwriting Analysis, Convolutional Neural Network, Early Diagnosis, Grad - CAM Attention Mechanism."
+    }
+  ]
+}
