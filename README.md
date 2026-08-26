@@ -113,7 +113,7 @@ wsl.exe -d Ubuntu-24.04 -- /home/user/venvs/parksoon-tf/bin/python -m unittest d
 
 | 파일 | 설명 |
 |---|---|
-| `run_kiosk_wsl.sh` | CUDA 라이브러리 경로를 설정하고 키오스크를 `127.0.0.1:8501`에 실행합니다. |
+| `run_kiosk_wsl.sh` | CUDA 라이브러리 경로를 설정하고 키오스크를 실행합니다. |
 | `requirements.txt` | 검증된 WSL 운영환경의 직접 의존성 고정 버전입니다. |
 | `requirements-kiosk-wsl.txt` | 동일한 키오스크 WSL 복구용 의존성 목록입니다. |
 | `requirements-reranker-wsl.txt` | 선택적 RAG 재정렬 모델의 추가 의존성입니다. |
