@@ -28,7 +28,7 @@
 
 - WSL2 Python: `/home/user/venvs/parksoon-tf/bin/python`
 - GPU: NVIDIA RTX A4000, PyTorch `2.11.0+cu128`
-- LM Studio API: WSL 전용 Windows 어댑터 `http://192.168.208.1:1234/v1`
+- LM Studio API: WSL에서 접근 가능한 Windows 호스트 주소의 LM Studio 포트 사용
 - 모델: 생성 `parkinsoon-eval`(Qwen3-8B), 채점 `parkinsoon-judge`(Gemma 4 E4B)
 - 마지막 안전 규칙 재평가는 사용자가 종료를 요청해 중단됐으며 결과 파일 갱신 여부를 내일 확인해야 한다.
 

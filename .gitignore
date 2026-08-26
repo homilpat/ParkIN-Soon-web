@@ -1,4 +1,6 @@
 .env
+.env.*
+.streamlit/secrets.toml
 modeling/customer_records.db
 /modeling/bge-reranker-v2-m3/
 # PPMI exports and derived tables contain participant identifiers.
@@ -12,6 +14,8 @@ data/parkinsons-drawings/
 .mplconfig/
 __pycache__/
 *.pyc
+# Accidental local path/cache directories.
+CUsersuser/
 # Archived experiment binaries and reference documents stay local.
 analysis_archive/**/*.keras
 analysis_archive/**/*.h5
